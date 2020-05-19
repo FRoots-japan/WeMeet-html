@@ -1,0 +1,37 @@
+@keyframes deflationHeight {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 120px;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    margin-top: 60px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes frameInElement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

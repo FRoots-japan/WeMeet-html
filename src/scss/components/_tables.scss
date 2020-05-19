@@ -1,0 +1,20 @@
+.tbl-line {
+  th, td {
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black;
+  }
+}
+
+@media (max-width: 767px) {
+  .tbl-line {
+    display: block;
+    box-sizing: border-box;
+    thead, tbody, tfoot, tr, th, td {
+      display: block;
+      box-sizing: border-box;
+    }
+  }
+}

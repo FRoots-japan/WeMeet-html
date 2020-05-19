@@ -1,0 +1,60 @@
+//ブロックレベル要素の初期化
+@mixin _initBoxSizing {
+  width: 100%;
+  box-sizing: border-box;
+}
+//横幅固定サイズの display:block を中央配置
+@mixin _centering {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+//文字サイズ
+@mixin _fontSize($size) {
+  @if $size == "tiny"  { font-size: 1.0rem; }
+  @if $size == "small" { font-size: 1.2rem; }
+  @if $size == "large" { font-size: 1.8rem; }
+  @if $size == "huge"  { font-size: 2.4rem; }
+}
+//アニメーションの初期値
+@mixin _easing {
+  transition: .3s ease-out;
+}
+//ボタンの初期値
+@mixin _button {
+  appearance: none;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+}
+//フォームパーツの初期値
+@mixin _formUi {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: none;
+  background-color: $white;
+  outline: none;
+}
+//表組みの崩し
+@mixin _breakTable {
+  display: block;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  thead, tbody {
+    display: block;
+    tr {
+      display: block;
+      th, td {
+        display: block;
+        border-bottom: none;
+      }
+    }
+  }
+}

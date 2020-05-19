@@ -1,0 +1,26 @@
+//汎用的な文字のサイズ配列
+$text-sizes: (
+  tiny: 1.0rem,
+  small: 1.2rem,
+  normal: 1.4rem,
+  large: 1.8rem,
+  huge: 2.4rem,
+) !default;
+
+//汎用的な隙間のサイズ配列
+$space-sizes: (
+  tiny: 5px,
+  small: 10px,
+  normal: 20px,
+  large: 40px,
+  huge: 80px,
+) !default;
+
+//汎用的な行間のサイズ配列
+$line-height-sizes: (
+  tiny: 1.0,
+  small: 1.2,
+  normal: 1.4,
+  large: 1.8,
+  huge: 2.4,
+) !default;

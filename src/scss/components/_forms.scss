@@ -1,0 +1,62 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  @include _formUi;
+  height: 56px;
+  line-height: 56px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+textarea {
+  @include _formUi;
+  padding: 10px;
+}
+select {
+  @include _formUi;
+  height: 56px;
+  line-height: 56px;
+  padding-right: 30px;
+  padding-left: 10px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px auto;
+  &::-ms-expand {
+    display: none;
+  }
+}
+.uploadfile {
+  input[type="file"] {
+    display: none !important;
+  }
+  label {
+    display: inline-block;
+    width: 170px;
+    height: 46px;
+    line-height: 46px;
+    color: $white;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: $black;
+    cursor: pointer;
+  }
+  span {
+    display: inline-block;
+    color: $black;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 767px) {
+  .uploadfile {
+    label {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    span {
+      display: block;
+    }
+  }
+}

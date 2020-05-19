@@ -1,0 +1,173 @@
+//フォント
+.wm-sofia-pro-ultra-light {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.wm-sofia-pro-extra-light {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.wm-sofia-pro-light {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.wm-sofia-pro-regular {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.wm-sofia-pro-medium {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.wm-sofia-pro-semi-bold {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.wm-sofia-pro-bold {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.wm-sofia-extra-bold {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.wm-sofia-ultra-bold {
+  font-family: sofia-pro, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+//表示・非表示
+.wm-display-block { display: block !important; }
+.wm-display-inline-block { display: inline-block !important; }
+.wm-display-inline { display: inline !important; }
+.wm-display-none { display: none !important; }
+@media (max-width: 479px) {
+  .wm-display-block-xs { display: block !important; }
+  .wm-display-inline-block-xs { display: inline-block !important; }
+  .wm-display-inline-xs { display: inline !important; }
+  .wm-display-none-xs { display: none !important; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .wm-display-block-sm { display: block !important; }
+  .wm-display-inline-block-sm { display: inline-block !important; }
+  .wm-display-inline-sm { display: inline !important; }
+  .wm-display-none-sm { display: none !important; }
+}
+@media (min-width: 768px) {
+  .wm-display-block-md { display: block !important; }
+  .wm-display-inline-block-md { display: inline-block !important; }
+  .wm-display-inline-md { display: inline !important; }
+  .wm-display-none-md { display: none !important; }
+}
+
+//テキスト位置
+.wm-text-center { text-align: center !important; }
+.wm-text-left { text-align: left !important; }
+.wm-text-right { text-align: right !important; }
+@media (max-width: 479px) {
+  .wm-text-center-xs { text-align: center !important; }
+  .wm-text-left-xs { text-align: left !important; }
+  .wm-text-right-xs { text-align: right !important; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .wm-text-center-sm { text-align: center !important; }
+  .wm-text-left-sm { text-align: left !important; }
+  .wm-text-right-sm { text-align: right !important; }
+}
+@media (min-width: 768px) {
+  .wm-text-center-md { text-align: center !important; }
+  .wm-text-left-md { text-align: left !important; }
+  .wm-text-right-md { text-align: right !important; }
+}
+
+//文字色
+@each $color, $value in $colors {
+  .wm-text-color-#{$color} { color: $value !important; }
+  @media (max-width: 479px) {
+    .wm-text-color-#{$color}-xs { color: $value !important; }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .wm-text-color-#{$color}-sm { color: $value !important; }
+  }
+  @media (min-width: 768px) {
+    .wm-text-color-#{$color}-md { color: $value !important; }
+  }
+}
+
+//文字サイズ
+@each $size, $value in $text-sizes {
+  .wm-text-size-#{$size} { font-size: $value !important; }
+  @media (max-width: 479px) {
+    .wm-text-size-#{$size}-xs { font-size: $value !important; }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .wm-text-size-#{$size}-sm { font-size: $value !important; }
+  }
+  @media (min-width: 768px) {
+    .wm-text-size-#{$size}-md { font-size: $value !important; }
+  }
+}
+
+//背景色
+@each $color, $value in $colors {
+  .wm-bg-color-#{$color} { background-color: $value !important; }
+  @media (max-width: 479px) {
+    .wm-bg-color-#{$color}-xs { background-color: $value !important; }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .wm-bg-color-#{$color}-sm { background-color: $value !important; }
+  }
+  @media (min-width: 768px) {
+    .wm-bg-color-#{$color}-md { background-color: $value !important; }
+  }
+}
+
+//上下左右のマージン
+@each $size, $value in $space-sizes {
+  .wm-mt-#{$size} { margin-top: $value !important; }
+  .wm-mr-#{$size} { margin-right: $value !important; }
+  .wm-mb-#{$size} { margin-bottom: $value !important; }
+  .wm-ml-#{$size} { margin-left: $value !important; }
+  .wm-pt-#{$size} { padding-top: $value !important; }
+  .wm-pr-#{$size} { padding-right: $value !important; }
+  .wm-pb-#{$size} { padding-bottom: $value !important; }
+  .wm-pl-#{$size} { padding-left: $value !important; }
+  @media (max-width: 479px) {
+    .wm-mt-#{$size}-xs { margin-top: $value !important; }
+    .wm-mr-#{$size}-xs { margin-right: $value !important; }
+    .wm-mb-#{$size}-xs { margin-bottom: $value !important; }
+    .wm-ml-#{$size}-xs { margin-left: $value !important; }
+    .wm-pt-#{$size}-xs { padding-top: $value !important; }
+    .wm-pr-#{$size}-xs { padding-right: $value !important; }
+    .wm-pb-#{$size}-xs { padding-bottom: $value !important; }
+    .wm-pl-#{$size}-xs { padding-left: $value !important; }
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    .wm-mt-#{$size}-sm { margin-top: $value !important; }
+    .wm-mr-#{$size}-sm { margin-right: $value !important; }
+    .wm-mb-#{$size}-sm { margin-bottom: $value !important; }
+    .wm-ml-#{$size}-sm { margin-left: $value !important; }
+    .wm-pt-#{$size}-sm { padding-top: $value !important; }
+    .wm-pr-#{$size}-sm { padding-right: $value !important; }
+    .wm-pb-#{$size}-sm { padding-bottom: $value !important; }
+    .wm-pl-#{$size}-sm { padding-left: $value !important; }
+  }
+  @media (min-width: 768px) {
+    .wm-mt-#{$size}-md { margin-top: $value !important; }
+    .wm-mr-#{$size}-md { margin-right: $value !important; }
+    .wm-mb-#{$size}-md { margin-bottom: $value !important; }
+    .wm-ml-#{$size}-md { margin-left: $value !important; }
+    .wm-pt-#{$size}-md { padding-top: $value !important; }
+    .wm-pr-#{$size}-md { padding-right: $value !important; }
+    .wm-pb-#{$size}-md { padding-bottom: $value !important; }
+    .wm-pl-#{$size}-md { padding-left: $value !important; }
+  }
+}

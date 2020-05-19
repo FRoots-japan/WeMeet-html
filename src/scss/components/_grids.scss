@@ -1,0 +1,52 @@
+//グリッド初期設定
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  &.row-between {
+    justify-content: space-between;
+  }
+  &.row-center {
+    justify-content: center;
+  }
+  &.row-align-item-center {
+    align-items: center;
+  }
+  > .col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  //カラム12個ぶんの横幅を生成
+  @for $i from 1 through 12 {
+    > .col-#{$i} {
+      flex-basis: auto !important;
+      flex-grow: 0 !important;
+      width: calc(100% / 12 * #{$i});
+    }
+    @media (max-width: 349px) {
+      > .col-#{$i}-xs {
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        width: calc(100% / 12 * #{$i}) !important;
+      }
+    }
+    @media (min-width: 350px) and (max-width: 767px) {
+      > .col-#{$i}-sm {
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        width: calc(100% / 12 * #{$i}) !important;
+      }
+    }
+    @media (min-width: 768px) {
+      > .col-#{$i}-md {
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        width: calc(100% / 12 * #{$i}) !important;
+      }
+    }
+  }
+}

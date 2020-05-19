@@ -1,0 +1,756 @@
+#wm-welcome-page {
+  .wm-section {
+    opacity: 0;
+    overflow: hidden;
+    &.wm-framein {
+      animation: fadeIn 1.0s ease-in-out 0s forwards;
+    }
+  }
+  .wm-keyvisual {
+    @include _initBoxSizing;
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/20051501.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    animation: fadeIn 2.0s ease-in-out 0s forwards;
+    .wm-keyvisual-contents {
+      position: absolute;
+      left: 15%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: 60px;
+      opacity: 0;
+      animation: fadeUp 1.0s ease-in-out 2.0s forwards;
+    }
+    .wm-caption {
+      font-size: 6.0rem;
+      color: $white;
+      line-height: 1.2;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 1.0s ease-in-out 2.0s forwards;
+    }
+    .wm-description {
+      font-size: 1.8rem;
+      color: $white;
+      font-weight: normal;
+      line-height: 1.0;
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeIn .5s ease-in-out 3.0s forwards;
+    }
+    .wm-button-normal {
+      box-shadow: 0px 11px 10px 0px rgba(255, 71, 122, 0.25);
+      opacity: 0;
+      animation: fadeIn .5s ease-in-out 3.5s forwards;
+    }
+    .wm-copy {
+      position: absolute;
+      left: 3%;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      color: $white;
+      line-height: 1.0;
+      color: $color-d8d8d8;
+      margin-top: -120px;
+    }
+    .wm-tips {
+      position: absolute;
+      right: 3%;
+      bottom: 154px;
+      font-size: 1.0rem;
+      color: $color-898b86;
+      line-height: 1.0;
+      .wm-text {
+        display: block;
+        transform: rotate(90deg);
+      }
+      &::before,
+      &::after {
+        position: absolute;
+        right: 52%;
+        bottom: -154px;
+        display: block;
+        width: 1px;
+        height: 120px;
+        overflow: hidden;
+        content: "";
+        box-sizing: border-box;
+        background-color: $color-52423a;
+      }
+      &::after {
+        height: 0;
+        background-color: $white;
+        animation: deflationHeight 4.0s ease-in-out 0s infinite;
+      }
+    }
+  }
+  .wm-introduction {
+    @include _initBoxSizing;
+    background-image: url(../images/20051504.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    .wm-wrap {
+      @include _centering;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1160px;
+      padding: 220px 20px;
+      .mw-logo {
+        max-width: 360px;
+      }
+      .mw-introduction-contents {
+        width: calc(100% - (360px + 140px));
+        .wm-caption {
+          font-size: 2.8rem;
+          font-weight: normal;
+          line-height: 1.0;
+          color: $pink;
+          margin-bottom: 40px;
+        }
+        .wm-description {
+          margin-bottom: 20px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .wm-what-we-do {
+    @include _initBoxSizing;
+    background-color: $very-very-light-gray;
+    .wm-wrap {
+      @include _initBoxSizing;
+      display: flex;
+      padding-top: 80px;
+      .wm-what-we-do-contents,
+      .wm-pic {
+        width: 50%;
+      }
+      .wm-what-we-do-contents {
+        max-width: 660px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: 0;
+        padding-top: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .wm-pic {
+        text-align: right;
+      }
+      .wm-caption {
+        font-size: 6.8rem;
+        line-height: 1.0;
+        margin-bottom: 90px;
+        .wm-en {
+          display: inline-block;
+        }
+        .wm-ja {
+          position: relative;
+          display: inline-block;
+          font-size: 1.4rem;
+          font-weight: normal;
+          color: $very-light-gray;
+          vertical-align: middle;
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            display: block;
+            width: 100%;
+            height: 3px;
+            content: "";
+            overflow: hidden;
+            border-radius: 3px;
+            background-color: $very-very-dark-gray;
+          }
+        }
+      }
+      .wm-title {
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 1.0;
+        margin-bottom: 30px;
+        .wm-badge {
+          display: inline-block;
+          font-size: 1.8rem;
+          color: $pink;
+          vertical-align: top;
+        }
+      }
+      .wm-description {
+        margin-bottom: 60px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .wm-value {
+    @include _initBoxSizing;
+    .wm-wrap {
+      @include _initBoxSizing;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      .wm-value-header {
+        max-width: 1320px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .wm-caption {
+        font-size: 6.8rem;
+        line-height: 1.0;
+        margin-bottom: 90px;
+        .wm-en {
+          display: inline-block;
+        }
+        .wm-ja {
+          position: relative;
+          display: inline-block;
+          font-size: 1.4rem;
+          font-weight: normal;
+          color: $very-light-gray;
+          vertical-align: middle;
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            display: block;
+            width: 100%;
+            height: 3px;
+            content: "";
+            overflow: hidden;
+            border-radius: 3px;
+            background-color: $very-very-dark-gray;
+          }
+        }
+      }
+      .wm-value-contents {
+        @include _centering;
+        max-width: 1320px;
+        padding-left: 20px;
+        padding-right: 20px;
+        .wm-value-panels {
+          @include _initBoxSizing;
+          display: flex;
+          justify-content: space-between;
+          > .wm-value-panel {
+            position: relative;
+            width: calc((100% - 60px) / 3);
+            box-sizing: border-box;
+            margin-right: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+          .wm-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            max-width: 40px;
+          }
+          .wm-value-panel-contents {
+            position: absolute;
+            left: 20px;
+            top: 58%;
+            width: calc(100% - 40px);
+          }
+          .wm-panel-caption {
+            font-size: 2.8rem;
+            line-height: 1.0;
+            color: $white;
+            margin-bottom: 20px;
+            .wm-ja {
+              display: inline-block;
+              font-size: 1.2rem;
+              font-weight: normal;
+            }
+          }
+          .wm-description {
+            font-size: 1.0rem;
+            color: $white;
+            line-height: 2.0;
+          }
+        }
+      }
+    }
+  }
+  .wm-experience {
+    @include _initBoxSizing;
+    background-color: $color-f394a2;
+    .wm-wrap {
+      max-width: 1320px;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 80px 20px;
+      background-image: url(../images/20051806.png);
+      background-position: right 20px top 248px;
+      background-repeat: no-repeat;
+      background-size: 100px auto;
+      .wm-experience-contents {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        > .wm-experience-col {
+          width: 50%;
+          box-sizing: border-box;
+        }
+      }
+      .wm-caption {
+        font-size: 6.8rem;
+        line-height: 1.0;
+        color: $white;
+        .wm-en {
+          display: block;
+        }
+        .wm-ja {
+          position: relative;
+          display: inline-block;
+          font-size: 1.4rem;
+          vertical-align: middle;
+          margin-top: -20px;
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            display: block;
+            width: 100%;
+            height: 3px;
+            content: "";
+            overflow: hidden;
+            border-radius: 3px;
+            background-color: $white;
+          }
+        }
+      }
+      .wm-experience-voice {
+        @include _initBoxSizing;
+        position: relative;
+        margin-bottom: 40px;
+        padding-left: 40px;
+        cursor: pointer;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &::before {
+          @include _easing;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          display: block;
+          width: 4px;
+          height: 100%;
+          content: "";
+          overflow: hidden;
+          border-radius: 4px;
+          background-color: $color-f6acb4;
+        }
+        .wm-user {
+          @include _initBoxSizing;
+          position: relative;
+        }
+        .wm-avatar {
+          max-width: 40px;
+        }
+        .wm-title {
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: block;
+          color: $white;
+          font-size: 1.6rem;
+          line-height: 1.0;
+          box-sizing: border-box;
+          .wm-attribute {
+            display: inline-block;
+            font-size: 1.2rem;
+            color: $color-f6acb4;
+            box-sizing: border-box;
+            margin-top: 5px;
+          }
+        }
+        .wm-description {
+          @include _initBoxSizing;
+          display: none;
+          color: $white;
+          font-size: 1.2rem;
+          line-height: 1.8;
+          margin-top: 15px;
+        }
+        &.wm-active {
+          &::before {
+            background-color: $white;
+          }
+          .wm-description {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .wm-faq {
+    @include _initBoxSizing;
+    .wm-wrap {
+      max-width: 1320px;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 80px 20px;
+      .wm-caption {
+        font-size: 6.8rem;
+        line-height: 1.0;
+        text-align: center;
+        margin-bottom: 20px;
+        .wm-en {
+          display: block;
+        }
+        .wm-ja {
+          display: inline-block;
+          font-size: 1.4rem;
+          vertical-align: middle;
+          margin-top: -40px;
+        }
+      }
+      .wm-faq-contents {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        > .wm-faq-col {
+          width: 50%;
+          box-sizing: border-box;
+          &:first-of-type {
+            padding-right: 20px;
+          }
+          &:last-of-type {
+            padding-left: 20px;
+          }
+          .wm-faq-article {
+            @include _initBoxSizing;
+            position: relative;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-top: 1px solid $color-ece8e9;
+            cursor: pointer;
+            &::before,
+            &::after {
+              @include _easing;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              width: 14px;
+              height: 2px;
+              content: "";
+              box-sizing: border-box;
+              background-color: $color-ddddde;
+            }
+            &::after {
+              transform: translateY(-50%) rotate(90deg);
+            }
+            &:last-of-type {
+              border-bottom: 1px solid $color-ece8e9;
+            }
+            .wm-faq-question {
+              @include _initBoxSizing;
+              @include _easing;
+              position: relative;
+              font-weight: bold;
+              padding-left: 20px;
+              &::before {
+                position: absolute;
+                left: 0;
+                top: -4px;
+                display: block;
+                content: "Q";
+                color: $pink;
+                font-size: 1.8rem;
+                font-family: sofia-pro, sans-serif;
+                font-weight: 900;
+                font-style: normal;
+                box-sizing: border-box;
+              }
+            }
+            .wm-faq-answer {
+              @include _initBoxSizing;
+              display: none;
+              font-size: 1.2rem;
+              margin-top: 10px;
+              padding-left: 20px;
+            }
+            &.wm-active {
+              &::before,
+              &::after {
+                background-color: $dark-pink;
+              }
+              &::after {
+                transform: translateY(-50%) rotate(0);
+              }
+              .wm-faq-question {
+                color: $dark-pink;
+              }
+              .wm-faq-answer {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .wm-try {
+    @include _initBoxSizing;
+    position: relative;
+    height: 520px;
+    background-image: url(../images/20051807.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .wm-wrap {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .wm-icon {
+      max-width: 40px;
+      margin-bottom: 40px;
+    }
+    .wm-caption {
+      font-size: 6.4rem;
+      color: $white;
+      line-height: 1.0;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+    .wm-description {
+      font-size: 1.8rem;
+      color: $white;
+      white-space: nowrap;
+      margin-bottom: 40px;
+    }
+    .wm-button-normal {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+    .wm-keyvisual {
+      background-image: url(../images/20051502.jpg);
+      .wm-keyvisual-contents {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .wm-caption {
+        font-size: 4.2rem;
+        white-space: nowrap;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+      .wm-description {
+        line-height: 1.6;
+        margin-bottom: 40px;
+      }
+      .wm-copy {
+        left: -50px;
+      }
+      .wm-tips {
+        right: -10px;
+      }
+    }
+    .wm-introduction {
+      background-image: url(../images/20051903.jpg);
+      .wm-wrap {
+        display: block;
+        padding: 60px 20px;
+        .mw-logo {
+          max-width: 160px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 60px;
+        }
+        .mw-introduction-contents {
+          width: 100%;
+          .wm-caption {
+            font-size: 2.0rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+          .wm-description {
+            line-height: 2.0;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .wm-what-we-do {
+      .wm-wrap {
+        display: block;
+        padding-top: 60px;
+        .wm-what-we-do-contents,
+        .wm-pic {
+          width: 100%;
+        }
+        .wm-what-we-do-contents {
+          margin-bottom: 40px;
+          padding-top: 0;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .wm-caption {
+          font-size: 4.2rem;
+          margin-bottom: 40px;
+          .wm-en {
+            display: block;
+          }
+          .wm-ja {
+            margin-top: -20px;
+          }
+        }
+        .wm-title {
+          font-size: 2.0rem;
+          margin-bottom: 20px;
+          .wm-badge {
+            font-size: 1.6rem;
+          }
+        }
+        .wm-description {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    .wm-value {
+      .wm-wrap {
+        padding: 60px 20px;
+        .wm-value-header {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .wm-caption {
+          font-size: 4.2rem;
+          margin-bottom: 40px;
+          .wm-en {
+            display: block;
+          }
+          .wm-ja {
+            margin-top: -20px;
+          }
+        }
+        .wm-value-contents {
+          padding-left: 0;
+          padding-right: 0;
+          .wm-value-panels {
+            display: block;
+            > .wm-value-panel {
+              width: 100%;
+              margin-right: 0;
+              margin-bottom: 20px;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .wm-experience {
+      .wm-wrap {
+        padding: 60px 20px;
+        background-position: right 10px top 310px;
+        background-size: 60px auto;
+        .wm-experience-contents {
+          display: block;
+          > .wm-experience-col {
+            width: 100%;
+          }
+        }
+        .wm-caption {
+          font-size: 4.2rem;
+          margin-bottom: 40px;
+          .wm-en {
+            display: block;
+          }
+          .wm-ja {
+            margin-top: -20px;
+          }
+        }
+        .wm-experience-voice {
+          padding-left: 30px;
+        }
+      }
+    }
+    .wm-faq {
+      .wm-wrap {
+        padding: 60px 20px;
+        .wm-caption {
+          font-size: 4.2rem;
+          margin-bottom: 40px;
+          .wm-en {
+            display: block;
+          }
+          .wm-ja {
+            margin-top: -20px;
+          }
+        }
+        .wm-faq-contents {
+          display: block;
+          > .wm-faq-col {
+            width: 100%;
+            &:first-of-type {
+              padding-right: 0;
+              .wm-faq-article {
+                &:last-of-type {
+                  border-bottom: none;
+                }
+              }
+            }
+            &:last-of-type {
+              padding-left: 0;
+            }
+            .wm-faq-article {
+              padding-top: 20px;
+              padding-bottom: 20px;
+              padding-right: 40px;
+            }
+          }
+        }
+      }
+    }
+    .wm-try {
+      height: 520px;
+      background-image: url(../images/20051807.jpg);
+      .wm-icon {
+        max-width: 40px;
+        margin-bottom: 40px;
+      }
+      .wm-caption {
+        font-size: 3.6rem;
+      }
+    }
+  }
+  @media (max-width: 479px) {
+  }
+}

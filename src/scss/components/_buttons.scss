@@ -1,0 +1,29 @@
+.wm-button-normal,
+.wm-button-small {
+  @include _button;
+  @include _easing;
+  color: $white;
+  background-color: $pink;
+  &:hover, &:active {
+    color: $white;
+    text-decoration: none;
+    background-color: $dark-pink;
+  }
+}
+.wm-button-normal {
+    width: 240px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 1.4rem;
+    border-radius: 64px;
+}
+.wm-button-small {
+    width: 170px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1.4rem;
+    border-radius: 44px;
+}
+
+@media (max-width: 767px) {
+}

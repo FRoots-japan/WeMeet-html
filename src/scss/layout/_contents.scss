@@ -1,0 +1,14 @@
+#wm-container {
+  @include _initBoxSizing;
+  position: relative;
+  #wm-main {
+    @include _initBoxSizing;
+    position: relative;
+  }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 479px) {
+  }
+}

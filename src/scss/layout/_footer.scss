@@ -1,0 +1,193 @@
+#wm-footer {
+  @include _initBoxSizing;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  .wm-wrap {
+    @include _centering;
+    max-width: 1400px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .wm-footer-contents,
+  .wm-footer-bottom {
+    @include _initBoxSizing;
+    display: flex;
+    justify-content: space-between;
+  }
+  .wm-footer-contents {
+    margin-bottom: 60px;
+  }
+  .wm-footer-bottom {
+    align-items: center;
+    .wm-items {
+      @include _initBoxSizing;
+      display: flex;
+      .wm-item {
+        @include _easing;
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+        margin-right: 10px;
+        border: 2px solid $very-light-gray;
+        border-radius: 50%;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .wm-icon {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: 20px;
+          height: 20px;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          &.wm-icon-instagram {
+            background-image: url(../images/20051814.png);
+          }
+          &.wm-icon-twitter {
+            background-image: url(../images/20051813.png);
+          }
+        }
+        &:hover {
+          border-color: $dark-pink;
+          .wm-icon {
+            &.wm-icon-instagram {
+              background-image: url(../images/20051902.png);
+            }
+            &.wm-icon-twitter {
+              background-image: url(../images/20051901.png);
+            }
+          }
+        }
+      }
+    }
+  }
+  .wm-logo {
+    display: block;
+    max-width: 100px;
+  }
+  .wm-caption {
+    font-size: 2.0rem;
+    line-height: 1.0;
+    margin-bottom: 20px;
+  }
+  .wm-nav {
+    display: flex;
+    .wm-items {
+      margin-right: 60px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      .wm-item {
+        @include _easing;
+        position: relative;
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 1.0;
+        color: $very-light-gray;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          display: inline-block;
+          content: "";
+          width: 6px;
+          height: 6px;
+          box-sizing: border-box;
+          margin-top: 1px;
+          border-top: 2px solid $very-light-gray;
+          border-right: 2px solid $very-light-gray;
+          transform: translateY(-50%) rotate(45deg);
+        }
+        &:hover {
+          color: $dark-pink;
+          text-decoration: none;
+          &::before {
+            border-top: 2px solid $dark-pink;
+            border-right: 2px solid $dark-pink;
+          }
+        }
+      }
+    }
+  }
+  .wm-copy {
+    font-size: 1.2rem;
+    line-height: 1.0;
+    color: $very-light-gray;
+  }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    .wm-wrap {
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .wm-footer-contents {
+      flex-direction: row-reverse;
+      margin-bottom: 40px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .wm-footer-bottom {
+      display: block;
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid $very-light-gray;
+      .wm-items {
+        position: absolute;
+        right: 35px;
+        top: 110px;
+        width: 70px;
+        .wm-item {
+          @include _easing;
+          width: 30px;
+          height: 30px;
+          .wm-icon {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+    .wm-logo {
+      max-width: 100px;
+    }
+    .wm-caption {
+      font-size: 2.0rem;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+    .wm-nav {
+      display: block;
+      .wm-items {
+        margin-right: 0;
+        margin-bottom: 40px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .wm-copy {
+      font-size: 1.2rem;
+      line-height: 1.0;
+      color: $very-light-gray;
+    }
+  }
+  @media (max-width: 479px) {
+  }
+}
