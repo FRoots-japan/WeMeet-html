@@ -7,20 +7,12 @@ $very-very-dark-gray: #54575a;
 $pink: #fd8392;
 $dark-pink: #e25e74;
 
-//サブカラー
-$color-696863: #696863;
 //サブカラー（グレー）
 $color-ece8e9: #ece8e9;
 $color-ddddde: #ddddde;
-$color-898b86: #898b86;
-$color-d8d8d8: #d8d8d8;
-$color-abacad: #abacad;
 //サブカラー（ピンク）
 $color-f394a2: #f394a2;
-$color-f6acb4: #f6acb4;
 $color-fffbfc: #fffbfc;
-//サブカラー（ブラウン）
-$color-52423a: #52423a;
 
 //汎用的なカラー配列
 $colors: (
@@ -31,14 +23,8 @@ $colors: (
   very-very-dark-gray: $very-very-dark-gray,
   pink: $pink,
   dark-pink: $dark-pink,
-  color-696863: $color-696863,
   color-f394a2: $color-f394a2,
-  color-f6acb4: $color-f6acb4,
   color-fffbfc: $color-fffbfc,
   color-ece8e9: $color-ece8e9,
   color-ddddde: $color-ddddde,
-  color-898b86: $color-898b86,
-  color-d8d8d8: $color-d8d8d8,
-  color-52423a: $color-52423a,
-  color-abacad: $color-abacad,
 ) !default;

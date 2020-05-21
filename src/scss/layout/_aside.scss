@@ -1,5 +1,117 @@
 #wm-aside {
   @include _initBoxSizing;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 998;
+  width: 240px;
+  padding-top: 116px;
+  background-color: rgba(0, 0, 0, .6);
+  .wm-items {
+    @include _initBoxSizing;
+    padding-left: 15px;
+    .wm-item {
+      position: relative;
+      display: block;
+      width: 210px;
+      height: 56px;
+      line-height: 54px;
+      color: rgba(255, 255, 255, .75);
+      text-decoration: none;
+      font-weight: bold;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      padding-left: 65px;
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 4px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .wm-icon {
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: 25px;
+        height: 25px;
+        content: "";
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        &.wm-icon-home {
+          background-image: url(../images/20052113.png);
+        }
+        &.wm-icon-column {
+          background-image: url(../images/20052114.png);
+        }
+        &.wm-icon-community {
+          background-image: url(../images/20052115.png);
+        }
+        &.wm-icon-profile {
+          background-image: url(../images/20052116.png);
+        }
+      }
+      &.wm-active {
+        width: 228px;
+        color: $white;
+        border: none;
+        background: #1cbacb; /* Old browsers */
+        background: -moz-linear-gradient(left,  #1cbacb 0%, #0dd395 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #1cbacb 0%, #0dd395 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #1cbacb 0%, #0dd395 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        .wm-icon {
+          &.wm-icon-home {
+            background-image: url(../images/20052109.png);
+          }
+          &.wm-icon-column {
+            background-image: url(../images/20052110.png);
+          }
+          &.wm-icon-community {
+            background-image: url(../images/20052111.png);
+          }
+          &.wm-icon-profile {
+            background-image: url(../images/20052112.png);
+          }
+        }
+      }
+    }
+  }
+  .wm-links {
+    position: fixed;
+    left: 30px;
+    bottom: 35px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    box-sizing: border-box;
+    .wm-link {
+      display: block;
+      color: $white;
+      font-size: 1.2rem;
+      &.wm-icon-arrow {
+        color: rgba(84, 97, 90, .5);
+        padding-left: 12px;
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          display: inline-block;
+          content: "";
+          width: 6px;
+          height: 6px;
+          box-sizing: border-box;
+          margin-top: 1px;
+          border-top: 2px solid rgba(84, 97, 90, .5);
+          border-right: 2px solid rgba(84, 97, 90, .5);
+          transform: translateY(-50%) rotate(225deg);
+        }
+      }
+    }
+  }
 
   //レスポンシブの定義
   @media (max-width: 767px) {

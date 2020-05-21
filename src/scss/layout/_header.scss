@@ -1,86 +1,89 @@
-#wm-header {
-  @include _initBoxSizing;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 99;
-  .wm-wrap {
-    @include _centering;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    padding-top: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .wm-logo {
-    display: block;
-    max-width: 140px;
-  }
-  .wm-nav {
-    display: flex;
-    align-items: center;
-    .wm-link {
-      @include _easing;
-      display: block;
-      line-height: 1.0;
-      color: $white;
-      box-sizing: border-box;
-      margin-left: 30px;
-      &:first-of-type {
-        margin-left: 0;
-        &::before {
-          display: none;
-        }
-      }
-      &::before {
-        display: inline-block;
-        content: "|";
-        line-height: 1.0;
-        box-sizing: border-box;
-        margin-right: 30px;
-        color: $color-696863;
-      }
-      &:hover {
-        color: $dark-pink;
-        text-decoration: none;
-      }
-    }
-    .wm-button-small {
-      margin-left: 60px;
-      box-shadow: 0px 11px 10px 0px rgba(255, 71, 122, 0.25);
-    }
-  }
-
-  //レスポンシブの定義
-  @media (max-width: 767px) {
+//ウェルカムページのヘッダー
+#wm-welcome-page {
+  #wm-header {
+    @include _initBoxSizing;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
     .wm-wrap {
-      align-items: stretch;
-      padding-top: 20px;
+      @include _centering;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      padding-top: 60px;
       padding-left: 20px;
       padding-right: 20px;
     }
     .wm-logo {
-      max-width: 120px;
-      padding-top: 15px;
+      display: block;
+      max-width: 140px;
     }
     .wm-nav {
-      flex-wrap: wrap-reverse;
-      justify-content: center;
-      max-width: 170px;
+      display: flex;
+      align-items: center;
       .wm-link {
-        margin-left: 15px;
+        @include _easing;
+        display: block;
+        line-height: 1.0;
+        color: $white;
+        box-sizing: border-box;
+        margin-left: 30px;
+        &:first-of-type {
+          margin-left: 0;
+          &::before {
+            display: none;
+          }
+        }
         &::before {
-          margin-right: 15px;
+          display: inline-block;
+          content: "|";
+          line-height: 1.0;
+          box-sizing: border-box;
+          margin-right: 30px;
+          color: rgba(255, 255, 255, .35);
+        }
+        &:hover {
+          color: $dark-pink;
+          text-decoration: none;
         }
       }
       .wm-button-small {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin-left: 60px;
+        box-shadow: 0px 11px 10px 0px rgba(255, 71, 122, 0.25);
       }
     }
-  }
-  @media (max-width: 479px) {
+
+    //レスポンシブの定義
+    @media (max-width: 767px) {
+      .wm-wrap {
+        align-items: stretch;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .wm-logo {
+        max-width: 120px;
+        padding-top: 15px;
+      }
+      .wm-nav {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        max-width: 170px;
+        .wm-link {
+          margin-left: 15px;
+          &::before {
+            margin-right: 15px;
+          }
+        }
+        .wm-button-small {
+          margin-left: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    @media (max-width: 479px) {
+    }
   }
 }

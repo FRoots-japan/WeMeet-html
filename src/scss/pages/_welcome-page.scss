@@ -59,9 +59,8 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%) rotate(90deg);
-      color: $white;
       line-height: 1.0;
-      color: $color-d8d8d8;
+      color: rgba(255, 255, 255, .6);
       margin-top: -120px;
     }
     .wm-tips {
@@ -69,7 +68,7 @@
       right: 3%;
       bottom: 154px;
       font-size: 1.0rem;
-      color: $color-898b86;
+      color: rgba(255, 255, 255, .6);
       line-height: 1.0;
       .wm-text {
         display: block;
@@ -86,7 +85,7 @@
         overflow: hidden;
         content: "";
         box-sizing: border-box;
-        background-color: $color-52423a;
+        background-color: rgba(255, 255, 255, .15);
       }
       &::after {
         height: 0;
@@ -242,7 +241,7 @@
       }
       .wm-value-contents {
         @include _centering;
-        max-width: 1320px;
+        max-width: 1580px;
         padding-left: 20px;
         padding-right: 20px;
         .wm-value-panels {
@@ -363,7 +362,7 @@
           content: "";
           overflow: hidden;
           border-radius: 4px;
-          background-color: $color-f6acb4;
+          background-color: rgba(255, 255, 255, .5);
         }
         .wm-user {
           @include _initBoxSizing;
@@ -385,7 +384,7 @@
           .wm-attribute {
             display: inline-block;
             font-size: 1.2rem;
-            color: $color-f6acb4;
+            color: rgba(255, 255, 255, .5);
             box-sizing: border-box;
             margin-top: 5px;
           }
@@ -528,7 +527,7 @@
   .wm-try {
     @include _initBoxSizing;
     position: relative;
-    height: 420px;
+    height: 700px;
     background-image: url(../images/20051807.jpg);
     background-repeat: no-repeat;
     background-position: center center;
