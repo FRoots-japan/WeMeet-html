@@ -268,18 +268,18 @@
           }
           .wm-value-panel-contents {
             position: absolute;
-            left: 20px;
-            top: 58%;
-            width: calc(100% - 40px);
+            left: 10%;
+            top: 56%;
+            width: calc(100% - 20%);
           }
           .wm-panel-caption {
-            font-size: 4.0rem;
+            font-size: 4.4rem;
             line-height: 1.0;
             color: $white;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             .wm-en {
               display: block;
-              margin-bottom: 10px;
+              margin-bottom: 20px;
             }
             .wm-ja {
               display: block;
@@ -288,7 +288,7 @@
             }
           }
           .wm-description {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: $white;
             line-height: 2.0;
           }
@@ -695,6 +695,18 @@
               &:last-of-type {
                 margin-bottom: 0;
               }
+            }
+            .wm-value-panel-contents {
+              left: 20px;
+              top: inherit;
+              bottom: 20px;
+              width: calc(100% - 40px);
+            }
+            .wm-panel-caption {
+              font-size: 4.0rem;
+            }
+            .wm-description {
+              font-size: 1.2rem;
             }
           }
         }
