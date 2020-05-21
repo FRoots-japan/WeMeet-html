@@ -92,13 +92,14 @@
   #wm-header {
     @include _initBoxSizing;
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     left: 0;
     top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     .wm-contents {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       width: 100%;
       height: 100px;
       box-sizing: border-box;
@@ -108,6 +109,55 @@
       text-align: center;
       img {
         max-width: 140px;
+      }
+    }
+    .wm-bar {
+    }
+    .wm-items {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding-right: 40px;
+      .wm-avatar {
+        max-width: 40px;
+        border-radius: 50%;
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.5);
+      }
+      .wm-username,
+      .wm-edit {
+        font-size: 1.0rem;
+        color: $white;
+        line-height: 1.0;
+        margin-left: 15px;
+        a {
+          color: $white;
+        }
+      }
+      .wm-username {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .wm-edit {
+        .wm-icon {
+          vertical-align: bottom;
+          margin-left: 5px;
+        }
+      }
+      .wm-badge {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        margin-left: 40px;
+        background-color: rgba(0, 0, 0, .25);
+        border-radius: 12px;
+        .wm-icon {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
     }
   }

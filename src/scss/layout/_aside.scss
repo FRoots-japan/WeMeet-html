@@ -4,7 +4,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  z-index: 998;
+  z-index: 98;
   width: 240px;
   padding-top: 116px;
   background-color: rgba(0, 0, 0, .6);
@@ -42,16 +42,16 @@
         background-size: contain;
         background-position: center center;
         &.wm-icon-home {
-          background-image: url(../images/20052113.png);
+          background-image: url(../images/20052113.svg);
         }
         &.wm-icon-column {
-          background-image: url(../images/20052114.png);
+          background-image: url(../images/20052114.svg);
         }
         &.wm-icon-community {
-          background-image: url(../images/20052115.png);
+          background-image: url(../images/20052115.svg);
         }
         &.wm-icon-profile {
-          background-image: url(../images/20052116.png);
+          background-image: url(../images/20052116.svg);
         }
       }
       &.wm-active {
@@ -64,16 +64,16 @@
         background: linear-gradient(to right,  #1cbacb 0%, #0dd395 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         .wm-icon {
           &.wm-icon-home {
-            background-image: url(../images/20052109.png);
+            background-image: url(../images/20052109.svg);
           }
           &.wm-icon-column {
-            background-image: url(../images/20052110.png);
+            background-image: url(../images/20052110.svg);
           }
           &.wm-icon-community {
-            background-image: url(../images/20052111.png);
+            background-image: url(../images/20052111.svg);
           }
           &.wm-icon-profile {
-            background-image: url(../images/20052112.png);
+            background-image: url(../images/20052112.svg);
           }
         }
       }

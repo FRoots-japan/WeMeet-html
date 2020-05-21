@@ -4,4 +4,104 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  #wm-main {
+    @include _initBoxSizing;
+    padding-left: 280px;
+    padding-top: 140px;
+    padding-right: 40px;
+    .wm-breadcrab {
+      position: fixed;
+      left: 280px;
+      top: 0;
+      z-index: 99;
+      height: 101px;
+      line-height: 101px;
+      color: $white;
+      .wm-en {
+        display: inline-block;
+        font-size: 3.4rem;
+      }
+      .wm-ja {
+        display: inline-block;
+        font-size: 1.2rem;
+        &::before {
+          display: inline-block;
+          content: "/";
+          margin-left: 4px;
+          margin-right: 8px;
+        }
+      }
+    }
+    .wm-wrap {
+      @include _initBoxSizing;
+    }
+    .wm-section {
+      @include _initBoxSizing;
+      .wm-caption {
+        font-size: 2.0rem;
+        font-weight: bold;
+        line-height: 1.0;
+        color: $white;
+        margin-bottom: 20px;
+      }
+    }
+    .wm-community-panels {
+      @include _initBoxSizing;
+      display: flex;
+      flex-wrap: wrap;
+      .wm-community-panel {
+        position: relative;
+        width: calc((100% - 60px) / 4);
+        box-sizing: border-box;
+        margin-top: 20px;
+        margin-right: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+        &:nth-of-type(4n) {
+          margin-right: 0;
+        }
+        &:nth-of-type(-n+4) {
+          margin-top: 0;
+        }
+        .wm-information {
+          position: absolute;
+          left: 35px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .wm-community-name,
+        .wm-community-members {
+          font-weight: bold;
+          line-height: 1.0;
+        }
+        .wm-community-name {
+          font-size: 1.8rem;
+          color: $white;
+          margin-bottom: 8px;
+        }
+        .wm-community-members {
+          font-size: 1.0rem;
+          color: rgba(255, 255, 255, .5);
+        }
+        .wm-icon {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: block;
+          width: 32px;
+          height: 32px;
+          text-decoration: none;
+          box-sizing: border-box;
+          border: 1px solid rgba(255, 255, 255, .35);
+          border-radius: 50%;
+          background: url(../images/20052120.svg) center center no-repeat;
+        }
+        .wm-thumbnail {
+          filter: brightness(45%) blur(2px);
+        }
+      }
+    }
+  }
 }
