@@ -87,6 +87,21 @@
   .wm-text-left-md { text-align: left !important; }
   .wm-text-right-md { text-align: right !important; }
 }
+//テキスト太さ
+.wm-text-normal { font-weight: normal !important; }
+.wm-text-bold { font-weight: bold !important; }
+@media (max-width: 479px) {
+  .wm-text-normal-xs { font-weight: normal !important; }
+  .wm-text-bold-xs { font-weight: bold !important; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .wm-text-normal-sm { font-weight: normal !important; }
+  .wm-text-bold-sm { font-weight: bold !important; }
+}
+@media (min-width: 768px) {
+  .wm-text-normal-md { font-weight: normal !important; }
+  .wm-text-bold-md { font-weight: bold !important; }
+}
 
 //文字色
 @each $color, $value in $colors {

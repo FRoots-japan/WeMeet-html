@@ -18,7 +18,7 @@
     animation: fadeIn 2.0s ease-in-out 0s forwards;
     .wm-keyvisual-contents {
       position: absolute;
-      left: 15%;
+      left: 10%;
       top: 50%;
       transform: translateY(-50%);
       margin-top: 60px;
@@ -26,21 +26,28 @@
       animation: fadeUp 1.0s ease-in-out 2.0s forwards;
     }
     .wm-caption {
-      font-size: 6.0rem;
-      color: $white;
-      line-height: 1.2;
+      //font-size: 6.0rem;
+      //color: $white;
+      //line-height: 1.2;
+      line-height: 1.0;
       margin-bottom: 40px;
       opacity: 0;
       animation: fadeIn 1.0s ease-in-out 2.0s forwards;
+      img {
+        max-width: 333px;
+      }
     }
     .wm-description {
-      font-size: 1.8rem;
-      color: $white;
-      font-weight: normal;
+      //font-size: 1.8rem;
+      //color: $white;
+      //font-weight: normal;
       line-height: 1.0;
       margin-bottom: 60px;
       opacity: 0;
       animation: fadeIn .5s ease-in-out 3.0s forwards;
+      img {
+        max-width: 310px;
+      }
     }
     .wm-button-normal {
       box-shadow: 0px 11px 10px 0px rgba(255, 71, 122, 0.25);
@@ -49,7 +56,7 @@
     }
     .wm-copy {
       position: absolute;
-      left: 3%;
+      left: 0;
       top: 50%;
       transform: translateY(-50%) rotate(90deg);
       color: $white;
@@ -138,7 +145,7 @@
         box-sizing: border-box;
         margin-left: auto;
         margin-right: 0;
-        padding-top: 100px;
+        padding-top: 80px;
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -146,9 +153,9 @@
         text-align: right;
       }
       .wm-caption {
-        font-size: 6.8rem;
+        font-size: 8.0rem;
         line-height: 1.0;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
         .wm-en {
           display: inline-block;
         }
@@ -156,8 +163,6 @@
           position: relative;
           display: inline-block;
           font-size: 1.4rem;
-          font-weight: normal;
-          color: $very-light-gray;
           vertical-align: middle;
           &::after {
             position: absolute;
@@ -183,9 +188,11 @@
           font-size: 1.8rem;
           color: $pink;
           vertical-align: top;
+          margin-right: 10px;
         }
       }
       .wm-description {
+        line-height: 2.2;
         margin-bottom: 60px;
         &:last-of-type {
           margin-bottom: 0;
@@ -198,7 +205,7 @@
     .wm-wrap {
       @include _initBoxSizing;
       padding-top: 80px;
-      padding-bottom: 80px;
+      padding-bottom: 100px;
       .wm-value-header {
         max-width: 1320px;
         box-sizing: border-box;
@@ -208,7 +215,7 @@
         padding-right: 20px;
       }
       .wm-caption {
-        font-size: 6.8rem;
+        font-size: 8.0rem;
         line-height: 1.0;
         margin-bottom: 90px;
         .wm-en {
@@ -218,8 +225,6 @@
           position: relative;
           display: inline-block;
           font-size: 1.4rem;
-          font-weight: normal;
-          color: $very-light-gray;
           vertical-align: middle;
           &::after {
             position: absolute;
@@ -258,8 +263,8 @@
           }
           .wm-icon {
             position: absolute;
-            right: 20px;
-            top: 20px;
+            right: 40px;
+            top: 40px;
             max-width: 40px;
           }
           .wm-value-panel-contents {
@@ -269,18 +274,22 @@
             width: calc(100% - 40px);
           }
           .wm-panel-caption {
-            font-size: 2.8rem;
+            font-size: 4.0rem;
             line-height: 1.0;
             color: $white;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            .wm-en {
+              display: block;
+              margin-bottom: 10px;
+            }
             .wm-ja {
-              display: inline-block;
-              font-size: 1.2rem;
+              display: block;
+              font-size: 1.6rem;
               font-weight: normal;
             }
           }
           .wm-description {
-            font-size: 1.0rem;
+            font-size: 1.2rem;
             color: $white;
             line-height: 2.0;
           }
@@ -296,11 +305,7 @@
       box-sizing: border-box;
       margin-left: auto;
       margin-right: auto;
-      padding: 80px 20px;
-      background-image: url(../images/20051806.png);
-      background-position: right 20px bottom 60px;
-      background-repeat: no-repeat;
-      background-size: 100px auto;
+      padding: 180px 20px 200px;
       .wm-experience-contents {
         display: flex;
         width: 100%;
@@ -311,7 +316,7 @@
         }
       }
       .wm-caption {
-        font-size: 6.8rem;
+        font-size: 8.0rem;
         line-height: 1.0;
         color: $white;
         .wm-en {
@@ -394,6 +399,10 @@
           margin-top: 15px;
         }
         &.wm-active {
+          background-image: url(../images/20051806.png);
+          background-position: right 20px top 10px;
+          background-repeat: no-repeat;
+          background-size: 80px auto;
           &::before {
             background-color: $white;
           }
@@ -411,9 +420,9 @@
       box-sizing: border-box;
       margin-left: auto;
       margin-right: auto;
-      padding: 80px 20px;
+      padding: 80px 20px 140px;
       .wm-caption {
-        font-size: 6.8rem;
+        font-size: 8.0rem;
         line-height: 1.0;
         text-align: center;
         margin-bottom: 20px;
@@ -445,6 +454,7 @@
             position: relative;
             padding-top: 30px;
             padding-bottom: 30px;
+            padding-right: 40px;
             border-top: 1px solid $color-ece8e9;
             cursor: pointer;
             &::before,
@@ -471,6 +481,7 @@
               @include _initBoxSizing;
               @include _easing;
               position: relative;
+              font-size: 1.6rem;
               font-weight: bold;
               padding-left: 20px;
               &::before {
@@ -490,7 +501,7 @@
             .wm-faq-answer {
               @include _initBoxSizing;
               display: none;
-              font-size: 1.2rem;
+              font-size: 1.4rem;
               margin-top: 10px;
               padding-left: 20px;
             }
@@ -517,7 +528,7 @@
   .wm-try {
     @include _initBoxSizing;
     position: relative;
-    height: 520px;
+    height: 420px;
     background-image: url(../images/20051807.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -535,17 +546,24 @@
       margin-bottom: 40px;
     }
     .wm-caption {
-      font-size: 6.4rem;
-      color: $white;
       line-height: 1.0;
-      white-space: nowrap;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 20px;
+      img {
+        max-width: 420px;
+      }
     }
     .wm-description {
-      font-size: 1.8rem;
-      color: $white;
-      white-space: nowrap;
+      line-height: 1.0;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 40px;
+      img {
+        max-width: 344px;
+      }
     }
     .wm-button-normal {
       margin-left: auto;
@@ -562,16 +580,22 @@
       .wm-keyvisual-contents {
         left: 50%;
         transform: translate(-50%, -50%);
+        max-width: 280px;
       }
       .wm-caption {
-        font-size: 4.2rem;
-        white-space: nowrap;
-        line-height: 1.4;
-        margin-bottom: 10px;
+        //font-size: 4.2rem;
+        //white-space: nowrap;
+        //line-height: 1.4;
+        img {
+          max-width: 280px;
+        }
       }
       .wm-description {
-        line-height: 1.6;
+        //line-height: 1.6;
         margin-bottom: 40px;
+        img {
+          max-width: 240px;
+        }
       }
       .wm-copy {
         left: -50px;
@@ -733,7 +757,6 @@
             .wm-faq-article {
               padding-top: 20px;
               padding-bottom: 20px;
-              padding-right: 40px;
             }
           }
         }
@@ -747,7 +770,14 @@
         margin-bottom: 40px;
       }
       .wm-caption {
-        font-size: 3.6rem;
+        img {
+          max-width: 320px;
+        }
+      }
+      .wm-description {
+        img {
+          max-width: 240px;
+        }
       }
     }
   }
