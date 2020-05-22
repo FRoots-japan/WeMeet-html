@@ -95,18 +95,24 @@
     z-index: 99;
     left: 0;
     top: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    background-image: url(../images/20052107.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     .wm-contents {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      height: 100px;
       box-sizing: border-box;
     }
     .wm-logo {
       width: 240px;
+      height: 100px;
       text-align: center;
+      box-sizing: border-box;
+      padding-top: 34px;
+      background-color: rgba(0, 0, 0, .6);
       img {
         max-width: 140px;
       }
@@ -125,12 +131,20 @@
       }
       .wm-username,
       .wm-edit {
+        @include _easing;
         font-size: 1.0rem;
         color: $white;
         line-height: 1.0;
         margin-left: 15px;
         a {
+          @include _easing;
           color: $white;
+          text-decoration: none;
+        }
+        &:hover {
+          a {
+            color: rgba(255, 255, 255, .5);
+          }
         }
       }
       .wm-username {
@@ -142,8 +156,12 @@
           vertical-align: bottom;
           margin-left: 5px;
         }
+        a {
+          color: rgba(255, 255, 255, .7);
+        }
       }
       .wm-badge {
+        @include _easing;
         position: relative;
         display: block;
         width: 50px;
@@ -152,13 +170,39 @@
         margin-left: 40px;
         background-color: rgba(0, 0, 0, .25);
         border-radius: 12px;
+        &:hover {
+          background-color: rgba(0, 0, 0, .45);
+        }
         .wm-icon {
           position: absolute;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
         }
+        .wm-light {
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          display: block;
+          width: 10px;
+          height: 10px;
+          content: "";
+          background-color: $color-ff4160;
+          border-radius: 50%;
+        }
       }
+    }
+    &::after {
+      position: fixed;
+      left: 0;
+      top: 100px;
+      z-index: 99;
+      width: 100%;
+      height: 1px;
+      content: "";
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, .1);
+      overflow: hidden;
     }
   }
 }

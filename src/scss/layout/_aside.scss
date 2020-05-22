@@ -58,10 +58,7 @@
         width: 228px;
         color: $white;
         border: none;
-        background: #1cbacb; /* Old browsers */
-        background: -moz-linear-gradient(left,  #1cbacb 0%, #0dd395 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left,  #1cbacb 0%, #0dd395 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right,  #1cbacb 0%, #0dd395 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(135deg, #1cbacb 0%, #0dd395 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         .wm-icon {
           &.wm-icon-home {
             background-image: url(../images/20052109.svg);
@@ -93,9 +90,19 @@
       color: $white;
       font-size: 1.2rem;
       &.wm-icon-arrow {
+        @include _easing;
         color: rgba(255, 255, 255, .5);
         padding-left: 12px;
+        &:hover {
+          text-decoration: none;
+          color: $white;
+          &::before {
+            border-top: 2px solid $white;
+            border-right: 2px solid $white;
+          }
+        }
         &::before {
+          @include _easing;
           position: absolute;
           left: 0;
           top: 50%;
