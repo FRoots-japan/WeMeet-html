@@ -245,4 +245,13 @@
       }
     }
   }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+    #wm-main {
+      display: none;
+    }
+  }
+  @media (max-width: 479px) {
+  }
 }
