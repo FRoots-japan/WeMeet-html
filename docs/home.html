@@ -46,7 +46,7 @@
 </head>
 
 <body id="wm-home-page" class="wm-home-page">
-  <div id="wm-container">
+  <div id="wm-container" class="">
     <header id="wm-header">
       <div class="wm-contents">
         <div class="wm-logo">
@@ -80,7 +80,7 @@
               </a>
             </div>
             <div class="wm-item wm-display-none-md">
-              <button class="wm-menu-button wm-active">
+              <button class="wm-menu-button jsMenuToggle">
                 <span class="wm-menu-line">&nbsp;</span>
                 <span class="wm-menu-line">&nbsp;</span>
                 <span class="wm-menu-line">&nbsp;</span>
@@ -95,21 +95,40 @@
       <nav class="wm-items">
         <a href="#" class="wm-item wm-active">
           <i class="wm-icon wm-icon-home"></i>
-          ホーム
+          <span class="wm-ja">ホーム</span>
+          <span class="wm-en wm-display-none-md">Home</span>
         </a>
         <a href="#" class="wm-item">
           <i class="wm-icon wm-icon-column"></i>
-          コラム
+          <span class="wm-ja">コラム</span>
+          <span class="wm-en wm-display-none-md">Column</span>
         </a>
         <a href="#" class="wm-item">
           <i class="wm-icon wm-icon-community"></i>
-          コミュニティ
+          <span class="wm-ja">コミュニティ</span>
+          <span class="wm-en wm-display-none-md">Community</span>
         </a>
         <a href="#" class="wm-item">
           <i class="wm-icon wm-icon-profile"></i>
-          プロフィール
+          <span class="wm-ja">プロフィール</span>
+          <span class="wm-en wm-display-none-md">Profile</span>
         </a>
       </nav>
+      <div class="wm-user-attributes wm-display-none-md">
+        <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+        <p class="wm-username">
+          <a href="#">
+            <span class="wm-text-size-normal">バローチ</span>
+            さん
+          </a>
+        </p>
+        <p class="wm-edit">
+          <a href="#" class="wm-sofia-pro-regular">
+            Profile Edit
+            <img src="./assets/images/20052119.svg" alt="Edit" class="wm-icon">
+          </a>
+        </p>
+      </div>
       <nav class="wm-links">
         <a href="#" class="wm-link wm-sofia-pro-medium wm-icon-arrow">
           wemeet.co.jp
@@ -119,6 +138,7 @@
         </a>
       </nav>
     </aside><!-- //#wm-aside -->
+    <div id="wm-overlay">&nbsp;</div><!-- //#wm-overlay -->
 
     <main id="wm-main">
       <h1 class="wm-breadcrab">

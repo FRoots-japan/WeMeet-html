@@ -209,7 +209,7 @@
   //レスポンシブの定義
   @media (max-width: 767px) {
     #wm-header {
-      background-image: url(../images/20052107.jpg);
+      background-image: url(../images/20052108.jpg);
       background-attachment: fixed;
       .wm-contents {
         padding-left: 15px;
@@ -292,6 +292,19 @@
       }
       &::after {
         top: 70px;
+      }
+    }
+    #wm-container {
+      &.wm-menu-active {
+        #wm-header {
+          z-index: 999;
+          background: transparent;
+          .wm-items {
+            .wm-badge {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

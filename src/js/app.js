@@ -2,10 +2,10 @@ $(function() {
   //ハンバーガーメニューを展開します
   $(".jsMenuToggle").on("click", function(e) {
     e.preventDefault();
-    $(this).toggleClass("active");
-    $(".jsMenuPanel").toggleClass("active");
+    $(this).toggleClass("wm-active");
+    $("#wm-container").toggleClass("wm-menu-active");
   });
-  $(".jsMenuPanel").on("click", function(e) {
+  $("#wm-aside").on("click", function(e) {
     e.stopPropagation();
   });
   //クリックされた次の要素を表示・非表示します
