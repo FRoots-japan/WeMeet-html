@@ -6,14 +6,22 @@ $very-light-gray: #dbdbdb;
 $very-very-dark-gray: #54575a;
 $pink: #fd8392;
 $dark-pink: #e25e74;
+$light-green: #12cba6;
+$green: #0fb291;
 
 //サブカラー（グレー）
 $color-ece8e9: #ece8e9;
 $color-ddddde: #ddddde;
+$color-f7f9fa: #f7f9fa;
 //サブカラー（ピンク）
 $color-f394a2: #f394a2;
 $color-fffbfc: #fffbfc;
 $color-ff4160: #ff4160;
+$color-2d373d: #2d373d;
+
+//SNSカラー
+$color-facebook: #496eba;
+$color-facebook-hover: #29568a;
 
 //汎用的なカラー配列
 $colors: (
@@ -24,8 +32,14 @@ $colors: (
   very-very-dark-gray: $very-very-dark-gray,
   pink: $pink,
   dark-pink: $dark-pink,
+  light-green: $light-green,
+  green: $green,
   color-f394a2: $color-f394a2,
   color-fffbfc: $color-fffbfc,
   color-ece8e9: $color-ece8e9,
   color-ddddde: $color-ddddde,
+  color-f7f9fa: $color-f7f9fa,
+  color-facebook: $color-facebook,
+  color-facebook-hover: $color-facebook-hover,
+  color-2d373d: $color-2d373d,
 ) !default;

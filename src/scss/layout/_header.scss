@@ -87,8 +87,8 @@
     }
   }
 }
-//ホームページのヘッダー
-#wm-home-page {
+//ページ共通のヘッダー
+.wm-common-page {
   #wm-header {
     @include _initBoxSizing;
     position: fixed;

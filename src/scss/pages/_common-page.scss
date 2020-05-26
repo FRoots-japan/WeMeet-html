@@ -1,0 +1,55 @@
+.wm-common-page {
+  background-image: url(../images/20052107.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+
+  //FBボタン
+  .wm-button-facebook {
+    @include _initBoxSizing;
+    @include _easing;
+    position: relative;
+    display: block;
+    height: 65px;
+    line-height: 65px;
+    color: $white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: $color-facebook;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    &:hover {
+      background-color: $color-facebook-hover;
+    }
+    .wm-en {
+      font-size: 1.8rem;
+    }
+    &::before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 17px;
+      height: 17px;
+      content: "";
+      box-sizing: border-box;
+      margin-left: -80px;
+      background-image: url(../images/20052602.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+    background-image: url(../images/20052108.jpg);
+    background-attachment: fixed;
+  }
+  @media (max-width: 479px) {
+  }
+}

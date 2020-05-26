@@ -1,8 +1,4 @@
 #wm-home-page {
-  background-image: url(../images/20052107.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: fixed;
   #wm-main {
     @include _initBoxSizing;
     padding-left: 280px;
@@ -247,8 +243,6 @@
 
   //レスポンシブの定義
   @media (max-width: 767px) {
-    background-image: url(../images/20052108.jpg);
-    background-attachment: fixed;
     #wm-main {
       padding: 90px 15px 50px;
       .wm-breadcrab {

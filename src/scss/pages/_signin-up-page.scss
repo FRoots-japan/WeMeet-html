@@ -1,0 +1,159 @@
+#wm-signin-up-page {
+  #wm-header {
+    max-width: 240px;
+    &::after {
+      max-width: 240px;
+    }
+  }
+  #wm-main {
+    @include _initBoxSizing;
+    padding: 40px 40px 20px 280px;
+    .wm-signin-up-box {
+      display: flex;
+      max-width: 980px;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: $white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      .wm-signin-up-box-logo {
+        position: relative;
+        width: 340px;
+        box-sizing: border-box;
+        text-align: center;
+        background-image: url(../images/20052603.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .wm-logo {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          max-width: 168px;
+        }
+      }
+      .wm-signin-up-box-form {
+        width: calc(100% - 340px);
+        box-sizing: border-box;
+        padding: 55px 80px;
+        .wm-caption {
+          font-size: 1.8rem;
+          font-weight: bold;
+          line-height: 1.0;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        .wm-button-facebook {
+          margin-bottom: 25px;
+        }
+        .wm-button-normal {
+          width: 300px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 30px;
+        }
+        .wm-or-lead {
+          @include _initBoxSizing;
+          position: relative;
+          color: $color-2d373d;
+          line-height: 1.0;
+          text-align: center;
+          margin-bottom: 25px;
+          &::before,
+          &::after {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 20px;
+            height: 1px;
+            line-height: 1px;
+            overflow: hidden;
+            content: "";
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, .1);
+          }
+          &::before {
+            margin-left: -44px;
+          }
+          &::after {
+            margin-left: 44px;
+          }
+        }
+      }
+      .fields {
+        @include _initBoxSizing;
+        .field {
+          @include _initBoxSizing;
+          position: relative;
+          margin-bottom: 15px;
+          &:last-of-type {
+            margin-bottom: 25px;
+          }
+        }
+        .wm-icon {
+          &::before {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 16px;
+            height: 16px;
+            box-sizing: border-box;
+            content: "";
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+          }
+          &.wm-icon-email {
+            &::before {
+              background-image: url(../images/20052604.svg);
+            }
+          }
+          &.wm-icon-user {
+            &::before {
+              background-image: url(../images/20052605.svg);
+            }
+          }
+          &.wm-icon-password {
+            &::before {
+              background-image: url(../images/20052606.svg);
+            }
+          }
+        }
+      }
+      .notes {
+        @include _initBoxSizing;
+        text-align: center;
+        li {
+          font-size: 1.2rem;
+          line-height: 1.0;
+          margin-bottom: 25px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          color: $light-green;
+          &:link, &:visited {
+            text-decoration: underline;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 479px) {
+  }
+}
