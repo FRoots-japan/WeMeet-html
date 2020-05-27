@@ -215,10 +215,13 @@
           input[type="tel"],
           input[type="password"] {
             color: $white;
+            font-size: 1.6rem;
             background-color: rgba(255, 255, 255, .2);
             border: 1px solid rgba(255, 255, 255, .5);
             &::placeholder {
               color: $white;
+              font-size: 1.4rem;
+              line-height: 2.0;
             }
           }
           .wm-icon {
