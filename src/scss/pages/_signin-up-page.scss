@@ -153,6 +153,100 @@
 
   //レスポンシブの定義
   @media (max-width: 767px) {
+    min-height: 100vh;
+    background: none;
+    background-image: url(../images/20052701.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    #wm-header {
+      display: none;
+    }
+    #wm-main {
+      padding: 40px 15px 0;
+      .wm-signin-up-box {
+        display: block;
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        .wm-signin-up-box-logo {
+          position: relative;
+          width: 100%;
+          background: none;
+          .wm-logo {
+            position: static;
+            transform: none;
+            max-width: 84px;
+            margin-bottom: 20px;
+          }
+        }
+        .wm-signin-up-box-form {
+          width: 100%;
+          padding: 0;
+          .wm-caption {
+            color: $white;
+            margin-bottom: 32px;
+          }
+          .wm-button-facebook {
+            margin-bottom: 20px;
+          }
+          .wm-button-normal {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          .wm-or-lead {
+            color: rgba(255, 255, 255, .9);
+            margin-bottom: 16px;
+            &::before,
+            &::after {
+              background-color: rgba(255, 255, 255, .25);
+            }
+          }
+        }
+        .fields {
+          .field {
+            margin-bottom: 12px;
+            &:last-of-type {
+              margin-bottom: 20px;
+            }
+          }
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          input[type="password"] {
+            color: $white;
+            background-color: rgba(255, 255, 255, .2);
+            border: 1px solid rgba(255, 255, 255, .5);
+            &::placeholder {
+              color: $white;
+            }
+          }
+          .wm-icon {
+            &.wm-icon-email {
+              &::before {
+                background-image: url(../images/20052702.svg);
+              }
+            }
+            &.wm-icon-user {
+              &::before {
+                background-image: url(../images/20052703.svg);
+              }
+            }
+            &.wm-icon-password {
+              &::before {
+                background-image: url(../images/20052704.svg);
+              }
+            }
+          }
+        }
+        .notes {
+          li {
+            color: $white;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
   }
   @media (max-width: 479px) {
   }

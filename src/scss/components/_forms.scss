@@ -51,6 +51,12 @@ select {
 }
 
 @media (max-width: 767px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"] {
+    height: 55px;
+  }
   .uploadfile {
     label {
       display: block;
