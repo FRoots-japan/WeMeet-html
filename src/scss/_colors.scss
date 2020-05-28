@@ -18,6 +18,12 @@ $color-f394a2: #f394a2;
 $color-fffbfc: #fffbfc;
 $color-ff4160: #ff4160;
 $color-2d373d: #2d373d;
+//サブカラー（グリーン）
+$color-0dd395: #0dd395;
+$color-1cbacb: #1cbacb;
+//サブカラー（ブルー）
+$color-00c9ec: #00c9ec;
+$color-008ae0: #008ae0;
 
 //SNSカラー
 $color-facebook: #496eba;
@@ -42,4 +48,6 @@ $colors: (
   color-facebook: $color-facebook,
   color-facebook-hover: $color-facebook-hover,
   color-2d373d: $color-2d373d,
+  color-0dd395: $color-0dd395,
+  color-1cbacb: $color-1cbacb,
 ) !default;

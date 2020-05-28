@@ -1,0 +1,78 @@
+#wm-columns-page {
+  #wm-main {
+    @include _initBoxSizing;
+    padding-left: 280px;
+    padding-top: 140px;
+    padding-right: 40px;
+    padding-bottom: 140px;
+    .wm-section {
+      @include _initBoxSizing;
+      .wm-caption {
+        position: relative;
+        font-size: 2.0rem;
+        font-weight: bold;
+        line-height: 1.0;
+        color: $white;
+        margin-bottom: 20px;
+        .wm-link {
+          @include _easing;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          display: inline-block;
+          font-size: 1.2rem;
+          line-height: 1.0;
+          color: $white;
+          text-decoration: none;
+          &:hover {
+            color: rgba(255, 255, 255, .5);
+            &::after {
+              border-top: 2px solid rgba(255, 255, 255, .5);
+              border-right: 2px solid rgba(255, 255, 255, .5);
+            }
+          }
+          &::after {
+            @include _easing;
+            display: inline-block;
+            content: "";
+            width: 6px;
+            height: 6px;
+            vertical-align: middle;
+            box-sizing: border-box;
+            margin-top: 5px;
+            border-top: 2px solid $white;
+            border-right: 2px solid $white;
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+      }
+      .wm-search-tags-field {
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+    #wm-main {
+      padding: 90px 15px 50px;
+      .wm-section {
+        .wm-caption {
+          font-size: 1.4rem;
+          margin-bottom: 10px;
+          .wm-link {
+            font-size: 1.0rem;
+            &::after {
+              margin-top: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 479px) {
+  }
+}

@@ -3,6 +3,238 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
+  //パンくず
+  .wm-breadcrab {
+    position: fixed;
+    left: 280px;
+    top: 0;
+    z-index: 99;
+    height: 101px;
+    line-height: 101px;
+    color: $white;
+    .wm-en {
+      display: inline-block;
+      font-size: 3.4rem;
+    }
+    .wm-ja {
+      display: inline-block;
+      font-size: 1.2rem;
+      &::before {
+        display: inline-block;
+        content: "/";
+        margin-left: 4px;
+        margin-right: 8px;
+      }
+    }
+  }
+  //タグ検索フォーム
+  .wm-search-tags-field {
+    position: relative;
+    width: 245px;
+    height: 60px;
+    .wm-search-placeholder {
+      @include _initBoxSizing;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+      height: 60px;
+      color: $white;
+      font-size: 1.2rem;
+      line-height: 60px;
+      font-weight: bold;
+      box-sizing: border-box;
+      padding-left: 55px;
+      background-color: rgba(0, 0, 0, .25);
+      border-radius: 60px;
+      cursor: pointer;
+      &::before,
+      &::after {
+        @include _easing;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        content: "";
+        box-sizing: border-box;
+      }
+      &::before {
+        left: 30px;
+        width: 15px;
+        height: 15px;
+        background-image: url(../images/20052801.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+      &::after {
+        right: 30px;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid $white;
+        border-right: 2px solid $white;
+        transform: translateY(-50%) rotate(135deg);
+      }
+    }
+    .wm-search-tags {
+      @include _easing;
+      @include _initBoxSizing;
+      position: absolute;
+      left: 0;
+      top: -13px;
+      z-index: 10;
+      display: none;
+      width: 271px;
+      padding-left: 30px;
+      padding-top: 95px;
+      padding-bottom: 50px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, $color-00c9ec 0%, $color-008ae0 100%);
+      .wm-search-tag {
+        @include _initBoxSizing;
+        position: relative;
+        display: block;
+        color: $white;
+        line-height: 1.0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        cursor: pointer;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          display: block;
+          width: 8px;
+          height: 1px;
+          content: "";
+          box-sizing: border-box;
+          overflow: hidden;
+          background-color: rgba(255, 255, 255, .5);
+        }
+      }
+    }
+    &.wm-active {
+      .wm-search-placeholder {
+        background: transparent;
+        &::after {
+          transform: translateY(-50%) rotate(315deg);
+        }
+      }
+      .wm-search-tags {
+        display: block;
+      }
+    }
+  }
+  //コラム一覧パネル
+  .wm-column-panels {
+    @include _initBoxSizing;
+    display: flex;
+    flex-wrap: wrap;
+    .wm-column-panel {
+      position: relative;
+      width: calc((100% - 60px) / 4);
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-right: 20px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+      &:hover {
+        .wm-thumbnail {
+          transform: scale(1.2, 1.2);
+        }
+      }
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+      &:nth-of-type(-n+4) {
+        margin-top: 0;
+      }
+      .wm-thumbnail-mask {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+        background: linear-gradient(180deg, transparent 0%, black 80%);
+        opacity: .75;
+      }
+      .wm-information {
+        position: absolute;
+        left: 30px;
+        bottom: 40px;
+        z-index: 9;
+        padding-right: 20px;
+      }
+      .wm-column-date {
+        font-size: 1.2rem;
+        line-height: 1.0;
+        color: rgba(255, 255, 255, .5);
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+      .wm-column-title {
+        font-size: 1.8rem;
+        color: $white;
+        font-weight: bold;
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      .wm-tags {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
+        .wm-tag {
+          display: block;
+          font-size: 1.0rem;
+          line-height: 1.0;
+          color: $white;
+          margin-right: 10px;
+          margin-top: 10px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+      .wm-icon {
+        @include _easing;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        z-index: 9;
+        display: block;
+        width: 34px;
+        height: 34px;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background-image: url(../images/20052205.svg);
+        background-color: rgba(255, 255, 255, .3);
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.wm-active {
+          background-color: $color-ff4160;
+        }
+      }
+      .wm-thumbnail {
+        @include _easing;
+      }
+    }
+  }
+  .wm-wrap {
+    @include _initBoxSizing;
+  }
 
   //FBボタン
   .wm-button-facebook {
@@ -49,6 +281,110 @@
   @media (max-width: 767px) {
     background-image: url(../images/20052108.jpg);
     background-attachment: fixed;
+    .wm-breadcrab {
+      position: static;
+      height: auto;
+      line-height: 1.0;
+      margin-bottom: 20px;
+      .wm-icon {
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        margin-top: -8px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1cbacb 0%, #0dd395 100%);
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+        &::before {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 15px;
+          height: 15px;
+          box-sizing: border-box;
+          content: "";
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+        &.wm-icon-home {
+          &::before {
+            background-image: url(../images/20052109.svg);
+          }
+        }
+      }
+      .wm-en {
+        font-size: 2.6rem;
+      }
+      .wm-ja {
+        font-size: 1.0rem;
+      }
+    }
+    .wm-column-panels {
+      display: block;
+      .wm-column-panel {
+        width: 100%;
+        margin-top: 7px;
+        margin-right: 0;
+        &:hover {
+          .wm-thumbnail {
+            transform: scale(1.0, 1.0);
+          }
+        }
+        &:nth-of-type(4n) {
+          margin-right: 0;
+        }
+        &:nth-of-type(-n+4) {
+          margin-top: 7px;
+        }
+        &:first-of-type {
+          margin-top: 0;
+        }
+        .wm-thumbnail-mask {
+        }
+        .wm-information {
+          left: 120px;
+          top: 50%;
+          bottom: inherit;
+          transform: translateY(-50%);
+          padding-right: 40px;
+        }
+        .wm-column-date {
+          font-size: 1.0rem;
+          margin-bottom: 10px;
+        }
+        .wm-column-title {
+          font-size: 1.4rem;
+        }
+        .wm-tags {
+          .wm-tag {
+            font-size: 1.0rem;
+            margin-right: 8px;
+            margin-top: 8px;
+          }
+        }
+        .wm-icon {
+          right: 12px;
+          top: 15px;
+          width: 25px;
+          height: 25px;
+        }
+        .wm-thumbnail {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 8;
+          max-width: 95px;
+        }
+        .wm-thumbnail-large {
+          filter: brightness(45%) blur(2px);
+        }
+      }
+    }
   }
   @media (max-width: 479px) {
   }

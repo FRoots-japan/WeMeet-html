@@ -41,11 +41,12 @@
   <script src="./assets/js/bundle.js"></script>
   <script>
     $(function() {
+      clickAccordion(".jsAccordion");
     });
   </script>
 </head>
 
-<body id="wm-home-page" class="wm-common-page wm-home-page">
+<body id="wm-columns-page" class="wm-common-page wm-columns-page">
   <div id="wm-container" class="">
     <header id="wm-header">
       <div class="wm-contents">
@@ -93,12 +94,12 @@
 
     <aside id="wm-aside">
       <nav class="wm-items">
-        <a href="#" class="wm-item wm-item-home wm-active">
+        <a href="#" class="wm-item wm-item-home">
           <i class="wm-icon wm-icon-home"></i>
           <span class="wm-ja">ホーム</span>
           <span class="wm-en wm-display-none-md">Home</span>
         </a>
-        <a href="#" class="wm-item wm-item-column">
+        <a href="#" class="wm-item wm-item-column wm-active">
           <i class="wm-icon wm-icon-column"></i>
           <span class="wm-ja">コラム</span>
           <span class="wm-en wm-display-none-md">Column</span>
@@ -144,55 +145,25 @@
       <h1 class="wm-breadcrab">
         <span class="wm-en wm-sofia-pro-bold">
           <i class="wm-icon wm-icon-home wm-display-none-md"></i>
-          Home
+          Column
         </span>
         <span class="wm-ja">
-          ホーム
+          コラム
         </span>
       </h1>
       <div class="wm-wrap">
         <section class="wm-section">
-          <h2 class="wm-caption">
-            参加中のコミュニティ
-          </h2>
-          <div class="wm-community-panels">
-            <article class="wm-community-panel">
-              <img src="./assets/images/20052121.jpg" alt="" class="wm-thumbnail">
-              <div class="wm-information">
-                <h3 class="wm-community-name">
-                  うつ
-                </h3>
-                <p class="wm-community-members wm-sofia-pro-bold">
-                  54,432 Members
-                </p>
-              </div>
-              <a href="#" class="wm-icon">&nbsp;</a>
-            </article>
-            <article class="wm-community-panel">
-              <img src="./assets/images/20052123.jpg" alt="" class="wm-thumbnail">
-              <div class="wm-information">
-                <h3 class="wm-community-name">
-                  介護
-                </h3>
-                <p class="wm-community-members wm-sofia-pro-bold">
-                  2,528 Members
-                </p>
-              </div>
-              <a href="#" class="wm-icon">&nbsp;</a>
-            </article>
-            <article class="wm-community-panel">
-              <img src="./assets/images/20052122.jpg" alt="" class="wm-thumbnail">
-              <div class="wm-information">
-                <h3 class="wm-community-name">
-                  LGBTQ+
-                </h3>
-                <p class="wm-community-members wm-sofia-pro-bold">
-                  2,528 Members
-                </p>
-              </div>
-              <a href="#" class="wm-icon">&nbsp;</a>
-            </article>
-          </div>
+          <dl class="wm-search-tags-field jsAccordion">
+            <dt class="wm-search-placeholder">タグから検索</dt>
+            <dd class="wm-search-tags">
+              <span class="wm-search-tag">#うつ病</span>
+              <span class="wm-search-tag">#ストレス</span>
+              <span class="wm-search-tag">#生活環境</span>
+              <span class="wm-search-tag">#メンタルケア</span>
+              <span class="wm-search-tag">#ダイバーシティ</span>
+              <span class="wm-search-tag">#セクシュアリティ</span>
+            </dd>
+          </dl>
         </section>
         <section class="wm-section">
           <h2 class="wm-caption">

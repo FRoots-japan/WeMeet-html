@@ -5,32 +5,6 @@
     padding-top: 140px;
     padding-right: 40px;
     padding-bottom: 140px;
-    .wm-breadcrab {
-      position: fixed;
-      left: 280px;
-      top: 0;
-      z-index: 99;
-      height: 101px;
-      line-height: 101px;
-      color: $white;
-      .wm-en {
-        display: inline-block;
-        font-size: 3.4rem;
-      }
-      .wm-ja {
-        display: inline-block;
-        font-size: 1.2rem;
-        &::before {
-          display: inline-block;
-          content: "/";
-          margin-left: 4px;
-          margin-right: 8px;
-        }
-      }
-    }
-    .wm-wrap {
-      @include _initBoxSizing;
-    }
     .wm-section {
       @include _initBoxSizing;
       .wm-caption {
@@ -139,155 +113,12 @@
         }
       }
     }
-    .wm-column-panels {
-      @include _initBoxSizing;
-      display: flex;
-      flex-wrap: wrap;
-      .wm-column-panel {
-        position: relative;
-        width: calc((100% - 60px) / 4);
-        box-sizing: border-box;
-        margin-top: 20px;
-        margin-right: 20px;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-        &:hover {
-          .wm-thumbnail {
-            transform: scale(1.2, 1.2);
-          }
-        }
-        &:nth-of-type(4n) {
-          margin-right: 0;
-        }
-        &:nth-of-type(-n+4) {
-          margin-top: 0;
-        }
-        .wm-thumbnail-mask {
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 8;
-          background: linear-gradient(180deg, transparent 0%, black 80%);
-          opacity: .75;
-        }
-        .wm-information {
-          position: absolute;
-          left: 30px;
-          bottom: 40px;
-          z-index: 9;
-          padding-right: 20px;
-        }
-        .wm-column-date {
-          font-size: 1.2rem;
-          line-height: 1.0;
-          color: rgba(255, 255, 255, .5);
-          box-sizing: border-box;
-          margin-bottom: 15px;
-        }
-        .wm-column-title {
-          font-size: 1.8rem;
-          color: $white;
-          font-weight: bold;
-          a {
-            color: $white;
-            text-decoration: none;
-          }
-        }
-        .wm-tags {
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-          box-sizing: border-box;
-          .wm-tag {
-            display: block;
-            font-size: 1.0rem;
-            line-height: 1.0;
-            color: $white;
-            margin-right: 10px;
-            margin-top: 10px;
-            &:last-of-type {
-              margin-right: 0;
-            }
-          }
-        }
-        .wm-icon {
-          @include _easing;
-          position: absolute;
-          right: 25px;
-          top: 25px;
-          z-index: 9;
-          display: block;
-          width: 34px;
-          height: 34px;
-          text-decoration: none;
-          box-sizing: border-box;
-          border-radius: 50%;
-          background-image: url(../images/20052205.svg);
-          background-color: rgba(255, 255, 255, .3);
-          background-repeat: no-repeat;
-          background-position: center center;
-          &.wm-active {
-            background-color: $color-ff4160;
-          }
-        }
-        .wm-thumbnail {
-          @include _easing;
-        }
-      }
-    }
   }
 
   //レスポンシブの定義
   @media (max-width: 767px) {
     #wm-main {
       padding: 90px 15px 50px;
-      .wm-breadcrab {
-        position: static;
-        height: auto;
-        line-height: 1.0;
-        margin-bottom: 20px;
-        .wm-icon {
-          position: relative;
-          display: inline-block;
-          width: 35px;
-          height: 35px;
-          vertical-align: middle;
-          box-sizing: border-box;
-          margin-top: -8px;
-          margin-right: 5px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #1cbacb 0%, #0dd395 100%);
-          box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
-          &::before {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 15px;
-            height: 15px;
-            box-sizing: border-box;
-            content: "";
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-          }
-          &.wm-icon-home {
-            &::before {
-              background-image: url(../images/20052109.svg);
-            }
-          }
-        }
-        .wm-en {
-          font-size: 2.6rem;
-        }
-        .wm-ja {
-          font-size: 1.0rem;
-        }
-      }
       .wm-section {
         .wm-caption {
           font-size: 1.4rem;
@@ -339,67 +170,6 @@
             width: 25px;
             height: 25px;
             background-size: 10px auto;
-          }
-        }
-      }
-      .wm-column-panels {
-        display: block;
-        .wm-column-panel {
-          width: 100%;
-          margin-top: 7px;
-          margin-right: 0;
-          &:hover {
-            .wm-thumbnail {
-              transform: scale(1.0, 1.0);
-            }
-          }
-          &:nth-of-type(4n) {
-            margin-right: 0;
-          }
-          &:nth-of-type(-n+4) {
-            margin-top: 7px;
-          }
-          &:first-of-type {
-            margin-top: 0;
-          }
-          .wm-thumbnail-mask {
-          }
-          .wm-information {
-            left: 120px;
-            top: 50%;
-            bottom: inherit;
-            transform: translateY(-50%);
-            padding-right: 40px;
-          }
-          .wm-column-date {
-            font-size: 1.0rem;
-            margin-bottom: 10px;
-          }
-          .wm-column-title {
-            font-size: 1.4rem;
-          }
-          .wm-tags {
-            .wm-tag {
-              font-size: 1.0rem;
-              margin-right: 8px;
-              margin-top: 8px;
-            }
-          }
-          .wm-icon {
-            right: 12px;
-            top: 15px;
-            width: 25px;
-            height: 25px;
-          }
-          .wm-thumbnail {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 8;
-            max-width: 95px;
-          }
-          .wm-thumbnail-large {
-            filter: brightness(45%) blur(2px);
           }
         }
       }

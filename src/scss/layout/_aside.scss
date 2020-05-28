@@ -58,7 +58,6 @@
         width: 228px;
         color: $white;
         border: none;
-        background: linear-gradient(135deg, #1cbacb 0%, #0dd395 100%);
         .wm-icon {
           &.wm-icon-home {
             background-image: url(../images/20052109.svg);
@@ -72,6 +71,16 @@
           &.wm-icon-profile {
             background-image: url(../images/20052112.svg);
           }
+        }
+      }
+      &.wm-item-home {
+        &.wm-active {
+          background: linear-gradient(135deg, $color-1cbacb 0%, $color-0dd395 100%);
+        }
+      }
+      &.wm-item-column {
+        &.wm-active {
+          background: linear-gradient(135deg, $color-00c9ec 0%, $color-008ae0 100%);
         }
       }
     }

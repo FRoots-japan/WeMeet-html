@@ -9,7 +9,7 @@
     background-color: $dark-pink;
   }
   &.wm-buton-color-green {
-    background: linear-gradient(135deg, #1cbacb 0%, #0dd395 100%);
+    background: linear-gradient(135deg, $color-1cbacb 0%, $color-0dd395 100%);
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
     &:hover, &:active {
       background: linear-gradient(135deg, $green 0%, $green 100%);
