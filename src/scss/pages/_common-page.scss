@@ -296,7 +296,6 @@
         margin-top: -8px;
         margin-right: 5px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #1cbacb 0%, #0dd395 100%);
         box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
         &::before {
           position: absolute;
@@ -312,8 +311,15 @@
           background-size: contain;
         }
         &.wm-icon-home {
+          background: linear-gradient(135deg, $color-1cbacb 0%, $color-0dd395 100%);
           &::before {
             background-image: url(../images/20052109.svg);
+          }
+        }
+        &.wm-icon-column {
+          background: linear-gradient(135deg, $color-00c9ec 0%, $color-008ae0 100%);
+          &::before {
+            background-image: url(../images/20052110.svg);
           }
         }
       }
@@ -322,6 +328,42 @@
       }
       .wm-ja {
         font-size: 1.0rem;
+      }
+    }
+    .wm-search-tags-field {
+      width: 100%;
+      height: 50px;
+      .wm-search-placeholder {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 48px;
+        border-radius: 50px;
+        &::before {
+          left: 23px;
+        }
+        &::after {
+          right: 23px;
+        }
+      }
+      .wm-search-tags {
+        top: -13px;
+        left: -10px;
+        width: calc(100% + 20px);
+        .wm-search-tag {
+          margin-bottom: 20px;
+          padding-left: 20px;
+        }
+      }
+      &.wm-active {
+        .wm-search-placeholder {
+          background: transparent;
+          &::after {
+            transform: translateY(-50%) rotate(315deg);
+          }
+        }
+        .wm-search-tags {
+          display: block;
+        }
       }
     }
     .wm-column-panels {
