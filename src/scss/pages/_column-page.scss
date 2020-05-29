@@ -116,8 +116,8 @@
         }
         .wm-bookmark {
           position: absolute;
-          right: 30px;
-          top: 30px;
+          right: 32px;
+          top: 32px;
           z-index: 9;
           .wm-icon {
             @include _easing;
@@ -338,6 +338,137 @@
         }
         .wm-search-tags-field {
           margin-bottom: 20px;
+        }
+      }
+      .wm-column-detail-box {
+        margin-bottom: 32px;
+        .wm-column-detail-header {
+          .wm-keyvisual-frame {
+          }
+          .wm-keyvisual {
+          }
+          .wm-information {
+            left: 24px;
+            padding-right: 24px;
+          }
+          .wm-attributes {
+            margin-bottom: 12px;
+          }
+          .wm-column-date {
+            font-size: 1.2rem;
+            margin-right: 16px;
+          }
+          .wm-tags {
+            .wm-tag {
+              font-size: 1.0rem;
+              margin-right: 8px;
+            }
+          }
+          .wm-column-title {
+            font-size: 2.0rem;
+          }
+          .wm-bookmark {
+            right: 12px;
+            top: 12px;
+            .wm-icon {
+              width: 25px;
+              height: 25px;
+            }
+          }
+          .wm-share-sns {
+            right: 12px;
+            bottom: -18px;
+          }
+        }
+        .wm-column-detail-body {
+          padding: 52px 24px 64px;
+          div, p, ul, ol, table, dl, img {
+            margin-bottom: 36px;
+          }
+          h2 {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+          }
+          h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 24px;
+          }
+          h4 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+          }
+          .wm-photo-small {
+            display: block;
+            text-align: center;
+            img {
+              margin-bottom: 16px;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+          .wm-photo-middle {
+          }
+          .wm-photo-large {
+            max-width: calc(100% + 48px);
+            margin-left: -24px;
+          }
+        }
+        .wm-column-detail-footer {
+          .wm-column-detail-footer-row {
+            display: block;
+            text-align: center;
+            padding-top: 32px;
+            padding-bottom: 44px;
+          }
+          .wm-link-comments {
+            margin-bottom: 32px;
+          }
+          .wm-share-sns {
+            flex-wrap: wrap;
+            justify-content: center;
+            .wm-note {
+              display: block;
+              width: 100%;
+              font-size: 1.2rem;
+              margin-bottom: 12px;
+              margin-right: 0;
+            }
+          }
+          .wm-official-message {
+            .wm-official-message-contents {
+              padding: 36px 36px 56px;
+              &::before,
+              &::after {
+                top: 0;
+                transform: none;
+              }
+              &::before {
+                left: 36px;
+                top: 24px;
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+
+              }
+              &::after {
+                left: 47px;
+                top: 35px;
+                width: 18px;
+                height: 18px;
+              }
+            }
+            .wm-official-message-caption {
+              font-size: 1.6rem;
+              margin-bottom: 36px;
+              padding-left: 48px;
+            }
+            .wm-official-message-description {
+              font-size: 1.4rem;
+            }
+          }
         }
       }
     }
