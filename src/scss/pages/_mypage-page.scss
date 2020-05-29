@@ -2,6 +2,9 @@
   #wm-main {
     @include _initBoxSizing;
     padding: 160px 40px 20px 280px;
+    .wm-profile-wrap {
+      @include _initBoxSizing;
+    }
     .wm-profile-box {
       display: flex;
       max-width: 980px;
@@ -221,99 +224,191 @@
 
   //レスポンシブの定義
   @media (max-width: 767px) {
-    min-height: 100vh;
-    background: none;
-    background-image: url(../images/20052701.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    #wm-header {
-      display: none;
-    }
     #wm-main {
-      padding: 40px 15px 0;
+      @include _initBoxSizing;
+      padding: 90px 15px 50px;
+      .wm-profile-wrap {
+        position: relative;
+        padding-bottom: 40px;
+      }
       .wm-profile-box {
         display: block;
-        background-color: transparent;
-        border-radius: 0;
-        box-shadow: none;
         .wm-profile-box-aside {
-          position: relative;
+          position: static;
           width: 100%;
+          padding-top: 0;
           background: none;
-          .wm-logo {
-            position: static;
-            transform: none;
-            max-width: 84px;
-            margin-bottom: 20px;
-          }
+          background: linear-gradient(135deg, $color-8773ed 0%, $color-9a3be1 100%);
         }
         .wm-profile-box-form {
           width: 100%;
-          padding: 0;
-          .wm-caption {
-            color: $white;
-            margin-bottom: 32px;
-          }
-          .wm-button-facebook {
-            margin-bottom: 20px;
-          }
+          padding: 20px 32px 40px;
           .wm-button-normal {
             width: 100%;
-            margin-bottom: 20px;
-          }
-          .wm-or-lead {
-            color: rgba(255, 255, 255, .9);
-            margin-bottom: 16px;
-            &::before,
-            &::after {
-              background-color: rgba(255, 255, 255, .25);
-            }
           }
         }
         .wm-fields {
+          .wm-label {
+            .wm-tips {
+            }
+          }
           .wm-field {
-            margin-bottom: 12px;
             &:last-of-type {
-              margin-bottom: 20px;
+              margin-bottom: 32px;
             }
-          }
-          input[type="text"],
-          input[type="email"],
-          input[type="tel"],
-          input[type="password"] {
-            color: $white;
-            font-size: 1.6rem;
-            background-color: rgba(255, 255, 255, .2);
-            border: 1px solid rgba(255, 255, 255, .5);
-            &::placeholder {
-              color: $white;
-              font-size: 1.4rem;
-              line-height: 2.0;
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="password"],
+            select,
+            textarea {
+              padding-left: 20px;
             }
-          }
-          .wm-icon {
-            &.wm-icon-email {
-              &::before {
-                background-image: url(../images/20052702.svg);
+            select {
+              background-position: right 8px center;
+            }
+            &.wm-gender {
+              .wm-label {
+                margin-right: 16px;
               }
             }
-            &.wm-icon-user {
-              &::before {
-                background-image: url(../images/20052703.svg);
+            &.wm-select-birth-date {
+              select {
+                width: 80px;
+                &:first-of-type {
+                  width: calc(100% - (20px + 160px));
+                }
               }
             }
-            &.wm-icon-password {
-              &::before {
-                background-image: url(../images/20052704.svg);
+          }
+          .wm-field-row {
+            display: block;
+            .wm-field-col {
+              width: 100%;
+              margin-bottom: 8px;
+              &:last-of-type {
+                margin-bottom: 0;
               }
             }
           }
         }
-        .notes {
-          li {
+        .wm-user-attributes {
+          @include _initBoxSizing;
+          text-align: center;
+          margin-bottom: 36px;
+          .wm-avatar {
+            max-width: 76px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.5);
+          }
+          .wm-username,
+          .wm-userid {
+            @include _easing;
+            line-height: 1.0;
+            a {
+              @include _easing;
+              text-decoration: none;
+            }
+          }
+          .wm-username {
+            font-weight: bold;
             color: $white;
-            margin-bottom: 16px;
+            margin-bottom: 5px;
+            a {
+              color: $white;
+            }
+          }
+          .wm-userid {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, .7);
+            a {
+              color: rgba(255, 255, 255, .7);
+            }
+          }
+        }
+        .wm-items {
+          display: flex;
+          padding-left: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          border: none;
+          .wm-item {
+            width: 50%;
+            height: 65px;
+            line-height: 65px;
+            text-align: center;
+            margin-bottom: 0;
+            padding-left: 0;
+            border: none;
+            border-radius: 0;
+            &:first-of-type {
+              border-right: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            &:last-of-type {
+              position: absolute;
+              right: 8px;
+              bottom: 2px;
+              display: inline-block;
+              width: auto;
+              height: auto;
+              font-size: 1.4rem;
+              line-height: 1.0;
+              border: none;
+              border-radius: 0;
+              margin-bottom: 0;
+              padding-left: 48px;
+            }
+            .wm-icon {
+              position: static;
+              transform: none;
+              display: inline-block;
+              vertical-align: middle;
+              margin-top: -4px;
+            }
+            &.wm-active {
+              width: 50%;
+              color: $perpul;
+              background-color: transparent;
+              .wm-ja {
+                position: relative;
+                display: inline-block;
+                width: 88%;
+                height: 44px;
+                line-height: 44px;
+                background-color: $white;
+                border-radius: 4px;
+                &::after {
+                  position: absolute;
+                  left: 50%;
+                  bottom: -5px;
+                  transform: translateX(-50%);
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  content: "";
+                  box-sizing: border-box;
+                  border-style: solid;
+                  border-width: 5px 4px 0 4px;
+                  border-color: $white transparent transparent transparent;
+                }
+              }
+            }
+          }
+        }
+        .wm-links {
+          position: absolute;
+          left: 10px;
+          bottom: 0;
+          display: inline-block;
+          width: auto;
+          padding-top: 0;
+          padding-left: 0;
+          .wm-link {
+            display: inline-block;
+            color: $white;
+            margin-right: 12px;
+            margin-bottom: 0;
           }
         }
       }

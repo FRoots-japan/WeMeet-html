@@ -114,14 +114,17 @@ input[type="radio"] {
     height: 55px;
     font-size: 1.6rem;
   }
-  .wm-uploadfile {
-    label {
-      display: block;
-      width: 100%;
-      margin-bottom: 5px;
+  .wm-fileupload {
+    height: 55px;
+    .wm-label-button {
+      left: 8px;
+      width: 95px;
+      padding-left: 32px;
+      background-position: left 8px center;
     }
-    span {
-      display: block;
+    .wm-label-note {
+      left: 110px;
+      font-size: 1.2rem;
     }
   }
 }
