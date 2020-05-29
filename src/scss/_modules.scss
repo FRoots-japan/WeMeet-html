@@ -105,15 +105,15 @@
 
 //文字色
 @each $color, $value in $colors {
-  .wm-text-color-#{$color} { color: $value !important; }
+  .wm-text-#{$color} { color: $value !important; }
   @media (max-width: 479px) {
-    .wm-text-color-#{$color}-xs { color: $value !important; }
+    .wm-text-#{$color}-xs { color: $value !important; }
   }
   @media (min-width: 480px) and (max-width: 767px) {
-    .wm-text-color-#{$color}-sm { color: $value !important; }
+    .wm-text-#{$color}-sm { color: $value !important; }
   }
   @media (min-width: 768px) {
-    .wm-text-color-#{$color}-md { color: $value !important; }
+    .wm-text-#{$color}-md { color: $value !important; }
   }
 }
 

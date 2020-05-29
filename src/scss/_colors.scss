@@ -18,16 +18,25 @@ $color-f394a2: #f394a2;
 $color-fffbfc: #fffbfc;
 $color-ff4160: #ff4160;
 $color-2d373d: #2d373d;
+$color-ee4671: #ee4671;
+$color-fc7298: #fc7298;
+$color-fd8192: #fd8192;
 //サブカラー（グリーン）
 $color-0dd395: #0dd395;
 $color-1cbacb: #1cbacb;
 //サブカラー（ブルー）
 $color-00c9ec: #00c9ec;
 $color-008ae0: #008ae0;
+$color-00a0e4: #00a0e4;
+$color-29baf8: #29baf8;
 
 //SNSカラー
 $color-facebook: #496eba;
 $color-facebook-hover: #29568a;
+$color-twitter: #2ca9f7;
+$color-twitter-hover: #1c87ca;
+$color-hatena: #527ae6;
+$color-hatena-hover: #3959ae;
 
 //汎用的なカラー配列
 $colors: (
@@ -47,7 +56,18 @@ $colors: (
   color-f7f9fa: $color-f7f9fa,
   color-facebook: $color-facebook,
   color-facebook-hover: $color-facebook-hover,
+  color-twitter: $color-twitter,
+  color-twitter-hover: $color-twitter-hover,
+  color-hatena: $color-hatena,
+  color-hatena-hover: $color-hatena-hover,
   color-2d373d: $color-2d373d,
   color-0dd395: $color-0dd395,
   color-1cbacb: $color-1cbacb,
+  color-00c9ec: $color-00c9ec,
+  color-008ae0: $color-008ae0,
+  color-00a0e4: $color-00a0e4,
+  color-29baf8: $color-29baf8,
+  color-ee4671: $color-ee4671,
+  color-fc7298: $color-fc7298,
+  color-fd8192: $color-fd8192,
 ) !default;

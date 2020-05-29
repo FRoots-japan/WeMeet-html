@@ -27,6 +27,83 @@
       }
     }
   }
+  //パンくず隣の戻るリンク
+  .wm-link-back {
+    position: fixed;
+    left: 50%;
+    top: 44px;
+    z-index: 99;
+    transform: translateX(-50%);
+    display: inline-block;
+    color: $white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-left: 120px;
+    &::before {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      box-sizing: border-box;
+      margin-right: 8px;
+      content: "";
+      background-image: url(../images/20052808.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  //SNSシェアボタン群
+  .wm-share-sns {
+    display: flex;
+    align-items: center;
+    .wm-note {
+      font-size: 1.0rem;
+      line-height: 1.0;
+      color: rgba(0, 0, 0, .5);
+      box-sizing: border-box;
+      margin-right: 10px;
+    }
+    .wm-icon {
+      @include _easing;
+      display: block;
+      width: 46px;
+      height: 46px;
+      box-sizing: border-box;
+      margin-right: 10px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &:link, &:visited {
+        text-decoration: none;
+      }
+      &.wm-icon-facebook {
+        background-color: $color-facebook;
+        background-image: url(../images/20052602.svg);
+      }
+      &.wm-icon-twitter {
+        background-color: $color-twitter;
+        background-image: url(../images/20052901.svg);
+      }
+      &.wm-icon-hatena {
+        background-color: $color-hatena;
+        background-image: url(../images/20052902.svg);
+      }
+      &:hover {
+        &.wm-icon-facebook {
+          background-color: $color-facebook-hover;
+        }
+        &.wm-icon-twitter {
+          background-color: $color-twitter-hover;
+        }
+        &.wm-icon-hatena {
+          background-color: $color-hatena-hover;
+        }
+      }
+    }
+  }
   //タグ検索フォーム
   .wm-search-tags-field {
     position: relative;
