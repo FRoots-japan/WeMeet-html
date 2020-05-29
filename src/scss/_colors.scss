@@ -8,6 +8,7 @@ $pink: #fd8392;
 $dark-pink: #e25e74;
 $light-green: #12cba6;
 $green: #0fb291;
+$perpul: #6d3cad;
 
 //サブカラー（グレー）
 $color-ece8e9: #ece8e9;
@@ -29,6 +30,10 @@ $color-00c9ec: #00c9ec;
 $color-008ae0: #008ae0;
 $color-00a0e4: #00a0e4;
 $color-29baf8: #29baf8;
+//サブカラー（パープル）
+$color-9a3be1: #9a3be1;
+$color-8773ed: #8773ed;
+$color-f0edf7: #f0edf7;
 
 //SNSカラー
 $color-facebook: #496eba;
@@ -49,6 +54,7 @@ $colors: (
   dark-pink: $dark-pink,
   light-green: $light-green,
   green: $green,
+  perpul: $perpul,
   color-f394a2: $color-f394a2,
   color-fffbfc: $color-fffbfc,
   color-ece8e9: $color-ece8e9,
@@ -70,4 +76,7 @@ $colors: (
   color-ee4671: $color-ee4671,
   color-fc7298: $color-fc7298,
   color-fd8192: $color-fd8192,
+  color-9a3be1: $color-9a3be1,
+  color-8773ed: $color-8773ed,
+  color-f0edf7: $color-f0edf7,
 ) !default;

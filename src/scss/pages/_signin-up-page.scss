@@ -85,9 +85,9 @@
           }
         }
       }
-      .fields {
+      .wm-fields {
         @include _initBoxSizing;
-        .field {
+        .wm-field {
           @include _initBoxSizing;
           position: relative;
           margin-bottom: 15px;
@@ -203,8 +203,8 @@
             }
           }
         }
-        .fields {
-          .field {
+        .wm-fields {
+          .wm-field {
             margin-bottom: 12px;
             &:last-of-type {
               margin-bottom: 20px;

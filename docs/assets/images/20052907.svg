@@ -1,0 +1,16 @@
+<svg id="ic" xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="base" class="cls-1" d="M717,260.468a1.5,1.5,0,0,1-1.5,1.5h-14a1.5,1.5,0,0,1-1.5-1.5v-9a1.5,1.5,0,0,1,1.5-1.5h14a1.5,1.5,0,0,1,1.5,1.5v9ZM702,251h13a1,1,0,0,1,1,1v8a1,1,0,0,1-1,1H702a1,1,0,0,1-1-1v-8A1,1,0,0,1,702,251Z" transform="translate(-700 -249.969)"/>
+  <path id="ic-2" data-name="ic" class="cls-1" d="M710.9,260.968l-3.614-4.337-3.614,4.337H710.9Zm5.1-2.32-3.211-3.852-2.919,3.5,2.224,2.669h3.447a0.46,0.46,0,0,0,.459-0.459v-1.861Z" transform="translate(-700 -249.969)"/>
+  <circle id="ic-3" data-name="ic" class="cls-2" cx="4" cy="4.031" r="1"/>
+</svg>
