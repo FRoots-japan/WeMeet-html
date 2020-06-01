@@ -38,7 +38,8 @@
         opacity: .75;
       }
       .wm-avatars,
-      .wm-information {
+      .wm-community-name,
+      .wm-community-members {
         position: absolute;
         z-index: 9;
       }
@@ -48,6 +49,7 @@
         display: flex;
         .wm-avatar {
           max-width: 32px;
+          max-height: 32px;
           margin-right: 4px;
           border-radius: 50%;
           &:last-of-type {
@@ -55,21 +57,19 @@
           }
         }
       }
-      .wm-information {
-        left: 40px;
-        bottom: 32px;
-      }
       .wm-community-name,
       .wm-community-members {
+        left: 40px;
         font-weight: bold;
         line-height: 1.0;
       }
       .wm-community-name {
+        bottom: 52px;
         font-size: 3.0rem;
         color: $white;
-        margin-bottom: 8px;
       }
       .wm-community-members {
+        bottom: 32px;
         font-size: 1.2rem;
         color: rgba(255, 255, 255, .5);
       }
@@ -104,6 +104,7 @@
     .wm-post-articles {
       > .wm-post-article {
         @include _initBoxSizing;
+        position: relative;
         background-color: $white;
         border-radius: 12px;
         overflow: hidden;
@@ -297,6 +298,143 @@
 
   //レスポンシブの定義
   @media (max-width: 767px) {
+    #wm-main {
+      padding: 90px 15px 120px;
+      .wm-community-wrap {
+        display: block;
+        .wm-community-aside {
+          max-width: 100%;
+        }
+        .wm-community-contents {
+          width: 100%;
+        }
+      }
+      .wm-community-panel {
+        @include _initBoxSizing;
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+        .wm-thumbnail-mask {
+          background: rgba(0, 0, 0, .15);
+          opacity: 1.0;
+        }
+        .wm-information {
+          position: absolute;
+          left: 0;
+          bottom: inherit;
+          top: 50%;
+          z-index: 9;
+          transform: translateY(-50%);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          box-sizing: border-box;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .wm-avatars,
+        .wm-community-name,
+        .wm-community-members {
+          position: static;
+        }
+        .wm-community-name,
+        .wm-community-members {
+        }
+        .wm-community-name {
+          display: inline-block;
+          font-size: 2.0rem;
+          vertical-align: middle;
+          margin-right: 12px;
+        }
+        .wm-community-members {
+          color: rgba(255, 255, 255, .8);
+        }
+        .wm-icon {
+          position: static;
+          display: inline-block;
+          vertical-align: middle;
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .wm-search-tags-field {
+        margin-bottom: 20px;
+      }
+      .wm-post-articles {
+        > .wm-post-article {
+          margin-bottom: 8px;
+        }
+        .wm-post-article-header {
+          padding: 20px 20px 0;
+          .wm-avatar {
+            max-width: 32px;
+            margin-right: 16px;
+          }
+          .wm-user-attribute {
+            font-size: 1.0rem;
+          }
+        }
+        .wm-post-article-body {
+          margin-bottom: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .wm-post-article-footer {
+          padding: 12px 20px;
+          .wm-post-article-row {
+            > .wm-post-article-col {
+              width: 100%;
+              &:last-of-type {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: auto;
+              }
+            }
+          }
+          .wm-attributes {
+            justify-content: space-between;
+            > .wm-attribute {
+              margin-right: 0;
+              &::after {
+                height: 10px;
+              }
+              &:nth-of-type(1) {
+                &::after {
+                  right: -14px;
+                }
+              }
+              &:nth-of-type(2) {
+                &::after {
+                  right: -16px;
+                }
+              }
+            }
+          }
+          .wm-link-large {
+            position: relative;
+            display: block;
+            width: 32px;
+            height: 32px;
+            background-color: $color-53a9cd;
+            border-radius: 50%;
+            .wm-icon {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              margin: 0;
+              &.wm-icon-comment {
+                background-image: url(../images/20060109.svg);
+              }
+            }
+          }
+        }
+      }
+    }
   }
   @media (max-width: 479px) {
   }

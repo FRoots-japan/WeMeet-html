@@ -447,6 +447,12 @@
             background-image: url(../images/20052112.svg);
           }
         }
+        &.wm-icon-community {
+          background: linear-gradient(135deg, $color-f594a5 0%, $color-ed6d99 100%);
+          &::before {
+            background-image: url(../images/20060108.svg);
+          }
+        }
       }
       .wm-en {
         font-size: 2.6rem;
@@ -587,6 +593,21 @@
         }
         .wm-thumbnail-large {
           filter: brightness(45%) blur(2px);
+        }
+      }
+    }
+    .wm-button-post-fixed {
+      right: 15px;
+      bottom: 24px;
+      width: 72px;
+      height: 72px;
+      font-size: 1.0rem;
+      padding-top: 12px;
+      .wm-icon {
+        width: 28px;
+        height: 28px;
+        &.wm-icon-comment {
+          margin-bottom: 6px;
         }
       }
     }
