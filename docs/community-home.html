@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta charset="utf-8">
+  <!-- telephone number not work -->
+  <meta name="format-detection" content="telephone=no">
+  <!-- IE compatibility not work -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <meta name="description" content="">
+  <!-- FB -->
+  <meta property="og:url" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="ja_JP">
+  <!-- TW -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <link rel="icon" href="./ico.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="./ico.png">
+  <meta name="msapplication-TileImage" content="./ico.png">
+  <meta name="msapplication-TileColor" content="#fd8392">
+
+  <!-- //Slick Slide CSS -->
+  <link rel="stylesheet" type="text/css" media="all" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <!-- //Adobe Web Font Css -->
+  <link rel="stylesheet" href="//use.typekit.net/tjj3skl.css">
+  <link rel="stylesheet" type="text/css" media="all" href="./assets/css/style.css">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- //Slick Slide JS -->
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/bundle.js"></script>
+  <script>
+    $(function() {
+      clickAccordion(".jsAccordion");
+    });
+  </script>
+</head>
+
+<body id="wm-community-page" class="wm-common-page wm-community-page">
+  <div id="wm-container" class="">
+    <header id="wm-header">
+      <div class="wm-contents">
+        <div class="wm-logo">
+          <a href="#">
+            <img src="./assets/images/20051503.png" alt="WeMeet Logo">
+          </a>
+        </div>
+        <div class="wm-bar">
+          <div class="wm-items">
+            <div class="wm-item wm-display-none-sm wm-display-none-xs">
+              <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+            </div>
+            <div class="wm-item wm-display-none-sm wm-display-none-xs">
+              <p class="wm-username">
+                <a href="#">
+                  <span class="wm-text-size-normal">バローチ</span>
+                  さん
+                </a>
+              </p>
+              <p class="wm-edit">
+                <a href="#" class="wm-sofia-pro-regular">
+                  Profile Edit
+                  <img src="./assets/images/20052119.svg" alt="Edit" class="wm-icon">
+                </a>
+              </p>
+            </div>
+            <div class="wm-item">
+              <a href="#" class="wm-badge">
+                <img src="./assets/images/20052117.svg" alt="Message" class="wm-icon">
+                <span class="wm-light">&nbsp;</span>
+              </a>
+            </div>
+            <div class="wm-item wm-display-none-md">
+              <button class="wm-menu-button jsMenuToggle">
+                <span class="wm-menu-line">&nbsp;</span>
+                <span class="wm-menu-line">&nbsp;</span>
+                <span class="wm-menu-line">&nbsp;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header><!-- //#wm-header -->
+
+    <aside id="wm-aside">
+      <nav class="wm-items">
+        <a href="#" class="wm-item wm-item-home">
+          <i class="wm-icon wm-icon-home"></i>
+          <span class="wm-ja">ホーム</span>
+          <span class="wm-en wm-display-none-md">Home</span>
+        </a>
+        <a href="#" class="wm-item wm-item-column">
+          <i class="wm-icon wm-icon-column"></i>
+          <span class="wm-ja">コラム</span>
+          <span class="wm-en wm-display-none-md">Column</span>
+        </a>
+        <a href="#" class="wm-item wm-item-community wm-active">
+          <i class="wm-icon wm-icon-community"></i>
+          <span class="wm-ja">コミュニティ</span>
+          <span class="wm-en wm-display-none-md">Community</span>
+        </a>
+        <a href="#" class="wm-item wm-item-profile">
+          <i class="wm-icon wm-icon-profile"></i>
+          <span class="wm-ja">プロフィール</span>
+          <span class="wm-en wm-display-none-md">Profile</span>
+        </a>
+      </nav>
+      <div class="wm-user-attributes wm-display-none-md">
+        <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+        <p class="wm-username">
+          <a href="#">
+            <span class="wm-text-size-normal">バローチ</span>
+            さん
+          </a>
+        </p>
+        <p class="wm-edit">
+          <a href="#" class="wm-sofia-pro-regular">
+            Profile Edit
+            <img src="./assets/images/20052119.svg" alt="Edit" class="wm-icon">
+          </a>
+        </p>
+      </div>
+      <nav class="wm-links">
+        <a href="#" class="wm-link wm-sofia-pro-medium wm-icon-arrow">
+          wemeet.co.jp
+        </a>
+        <a href="#" class="wm-link wm-sofia-pro-medium">
+          Log out
+        </a>
+      </nav>
+    </aside><!-- //#wm-aside -->
+    <div id="wm-overlay">&nbsp;</div><!-- //#wm-overlay -->
+
+    <main id="wm-main">
+      <h1 class="wm-breadcrab">
+        <span class="wm-en wm-sofia-pro-bold">
+          <i class="wm-icon wm-icon-column wm-display-none-md"></i>
+          Community
+        </span>
+        <span class="wm-ja">
+          コミュニティ
+        </span>
+      </h1>
+      <div class="wm-wrap wm-community-wrap">
+        <aside class="wm-community-aside">
+          <section class="wm-section">
+            <div class="wm-community-panel">
+              <span class="wm-thumbnail-mask wm-display-none-sm wm-display-none-xs"></span>
+              <img src="../assets/images/20060101.jpg" alt="" class="wm-thumbnail">
+              <img src="../assets/images/20052206.jpg" alt="" class="wm-thumbnail-large wm-display-none-md">
+              <div class="wm-information">
+                <h3 class="wm-community-name">
+                  うつ
+                </h3>
+                <p class="wm-community-members wm-sofia-pro-bold">
+                  54,432 Members
+                </p>
+              </div>
+              <div class="wm-avatars">
+                <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+                <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+                <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+                <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+              </div>
+              <a href="#" class="wm-icon wm-active">&nbsp;</a>
+            </div>
+          </section>
+          <section class="wm-section">
+            <dl class="wm-search-tags-field jsAccordion">
+              <dt class="wm-search-placeholder">コミュニティを検索</dt>
+              <dd class="wm-search-tags">
+                <span class="wm-search-tag">うつ病</span>
+                <span class="wm-search-tag">ストレス</span>
+                <span class="wm-search-tag">生活環境</span>
+                <span class="wm-search-tag">メンタルケア</span>
+                <span class="wm-search-tag">ダイバーシティ</span>
+                <span class="wm-search-tag">セクシュアリティ</span>
+              </dd>
+            </dl>
+          </section>
+        </aside>
+        <div class="wm-community-contents">
+          <section class="wm-section wm-post-articles">
+            <article class="wm-post-article">
+              <div class="wm-post-article-header">
+                <img src="./assets/images/20060107.svg" alt="User Avatar" class="wm-avatar">
+                <div class="wm-information">
+                  <p class="wm-username">池田 詩織</p>
+                  <p class="wm-user-attribute">サポーター　31日前</p>
+                </div>
+              </div>
+              <div class="wm-post-article-body">
+                <p>初めましてShiorinと申します。 鬱と診断されて7ヶ月が経とうとしています。休職の診断も幸い無く、月1の通院と内服をしています。仕事でもパワハラ紛いにも継続中です。こちらのアプリで少しでも自分にとっての居場所に出来たらなと思います。 私は、鬱病1年になります。今高血圧もありですが、天気のいい日は散歩にいってます。</p>
+              </div>
+              <div class="wm-post-article-footer">
+                <div class="wm-post-article-row">
+                  <div class="wm-post-article-col">
+                    <ul class="wm-attributes">
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-badge">
+                          <i class="wm-icon wm-icon-logo"></i>
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-heart"></i>
+                          スキ
+                          <span class="wm-counter">8</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-comment"></i>
+                          コメント
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="wm-post-article-col">
+                    <a href="#" class="wm-link-large">
+                      <i class="wm-icon wm-icon-comment"></i>コメントする
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="wm-post-article">
+              <div class="wm-post-article-header">
+                <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+                <div class="wm-information">
+                  <p class="wm-username">バローチ ニール</p>
+                  <p class="wm-user-attribute">管理人　42日前</p>
+                </div>
+              </div>
+              <div class="wm-post-article-body">
+                <p>こんにちは！ お気づきの方もいらっしゃるかと思いますが、このアプリだと本名だけでなくニックネームでも登録が可能です。本日より数日間βテストを実施します。 </p>
+              </div>
+              <div class="wm-post-article-footer">
+                <div class="wm-post-article-row">
+                  <div class="wm-post-article-col">
+                    <ul class="wm-attributes">
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-badge">
+                          <i class="wm-icon wm-icon-logo"></i>
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-heart"></i>
+                          スキ
+                          <span class="wm-counter">8</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-comment"></i>
+                          コメント
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="wm-post-article-col">
+                    <a href="#" class="wm-link-large">
+                      <i class="wm-icon wm-icon-comment"></i>コメントする
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="wm-post-article">
+              <div class="wm-post-article-header">
+                <img src="./assets/images/20060107.svg" alt="User Avatar" class="wm-avatar">
+                <div class="wm-information">
+                  <p class="wm-username">河西 愛</p>
+                  <p class="wm-user-attribute">65日前</p>
+                </div>
+              </div>
+              <div class="wm-post-article-body">
+                <p>参加させていただきました。同じような経験をされた方と交流したいと思っています。よろしくお願いします。</p>
+              </div>
+              <div class="wm-post-article-footer">
+                <div class="wm-post-article-row">
+                  <div class="wm-post-article-col">
+                    <ul class="wm-attributes">
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-badge">
+                          <i class="wm-icon wm-icon-logo"></i>
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-heart"></i>
+                          スキ
+                          <span class="wm-counter">8</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-comment"></i>
+                          コメント
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="wm-post-article-col">
+                    <a href="#" class="wm-link-large">
+                      <i class="wm-icon wm-icon-comment"></i>コメントする
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="wm-post-article">
+              <div class="wm-post-article-header">
+                <img src="./assets/images/20052118.jpg" alt="User Avatar" class="wm-avatar">
+                <div class="wm-information">
+                  <p class="wm-username">松田 咲</p>
+                  <p class="wm-user-attribute">79日前</p>
+                </div>
+              </div>
+              <div class="wm-post-article-body">
+                <p>今日は昨日より暖かいような気がします。気分転換に少しお散歩しようと思います。</p>
+              </div>
+              <div class="wm-post-article-footer">
+                <div class="wm-post-article-row">
+                  <div class="wm-post-article-col">
+                    <ul class="wm-attributes">
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-badge">
+                          <i class="wm-icon wm-icon-logo"></i>
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-heart"></i>
+                          スキ
+                          <span class="wm-counter">8</span>
+                        </a>
+                      </li>
+                      <li class="wm-attribute">
+                        <a href="#" class="wm-link">
+                          <i class="wm-icon wm-icon-comment"></i>
+                          コメント
+                          <span class="wm-counter">34</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="wm-post-article-col">
+                    <a href="#" class="wm-link-large">
+                      <i class="wm-icon wm-icon-comment"></i>コメントする
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <a href="#" class="wm-button-post-fixed">
+        <i class="wm-icon wm-icon-comment"></i>
+        投稿する
+      </a>
+    </main>
+  </div><!-- //#wm-container -->
+</body>
+</html>

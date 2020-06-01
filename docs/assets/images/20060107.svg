@@ -1,0 +1,18 @@
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ededed;
+      }
+
+      .cls-2 {
+        fill: #c8c8c8;
+        fill-rule: evenodd;
+        opacity: 0.75;
+      }
+    </style>
+  </defs>
+  <circle id="base" class="cls-1" cx="20.125" cy="20.047" r="19.813"/>
+  <image id="レイヤー_2186" data-name="レイヤー 2186" width="40" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAR0lEQVRYhe3OMQGAMBAAsQf/Vl8DiLgOHRIFeXb3m4u9N+dG8ADBSrASrAQrwUqwEqwEK8FKsBKsBCvBSrASrAQrwUowmZkf8IwEFkfmTIgAAAAASUVORK5CYII="/>
+  <path id="ic" class="cls-2" d="M755.4,394.366a4.922,4.922,0,1,1-4.921,4.922A4.927,4.927,0,0,1,755.4,394.366Zm0,22.653a11.942,11.942,0,0,1-8.75-3.9,8.843,8.843,0,0,1,17.458-.026A12.091,12.091,0,0,1,755.4,417.019Z" transform="translate(-735 -385)"/>
+</svg>

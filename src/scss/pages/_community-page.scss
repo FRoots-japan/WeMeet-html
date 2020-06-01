@@ -1,0 +1,303 @@
+#wm-community-page {
+  #wm-main {
+    @include _initBoxSizing;
+    padding-left: 280px;
+    padding-top: 140px;
+    padding-right: 40px;
+    padding-bottom: 140px;
+    .wm-community-wrap {
+      @include _initBoxSizing;
+      display: flex;
+      justify-content: space-between;
+      .wm-community-aside {
+        max-width: 410px;
+      }
+      .wm-community-contents {
+        width: calc(100% - (410px + 20px));
+      }
+    }
+    .wm-section {
+      @include _initBoxSizing;
+    }
+    .wm-community-panel {
+      @include _initBoxSizing;
+      position: relative;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+      .wm-thumbnail-mask {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 8;
+        background: linear-gradient(180deg, transparent 0%, black 80%);
+        opacity: .75;
+      }
+      .wm-avatars,
+      .wm-information {
+        position: absolute;
+        z-index: 9;
+      }
+      .wm-avatars {
+        right: 30px;
+        bottom: 32px;
+        display: flex;
+        .wm-avatar {
+          max-width: 32px;
+          margin-right: 4px;
+          border-radius: 50%;
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+      .wm-information {
+        left: 40px;
+        bottom: 32px;
+      }
+      .wm-community-name,
+      .wm-community-members {
+        font-weight: bold;
+        line-height: 1.0;
+      }
+      .wm-community-name {
+        font-size: 3.0rem;
+        color: $white;
+        margin-bottom: 8px;
+      }
+      .wm-community-members {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, .5);
+      }
+      .wm-icon {
+        @include _easing;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        z-index: 9;
+        display: block;
+        width: 34px;
+        height: 34px;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background-image: url(../images/20052205.svg);
+        background-color: rgba(255, 255, 255, .3);
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.wm-active {
+          background-color: $color-ff4160;
+        }
+      }
+    }
+    .wm-search-tags-field {
+      margin-left: auto;
+      margin-right: 0;
+      .wm-search-tags {
+        background: linear-gradient(180deg, $color-f594a5 0%, $color-ed6d99 100%);
+      }
+    }
+    .wm-post-articles {
+      > .wm-post-article {
+        @include _initBoxSizing;
+        background-color: $white;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      .wm-post-article-header {
+        @include _initBoxSizing;
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        padding: 24px 24px 0;
+        .wm-avatar {
+          display: block;
+          max-width: 42px;
+          margin-right: 20px;
+          border-radius: 50%;
+        }
+        .wm-information {
+          @include _initBoxSizing;
+        }
+        .wm-username {
+          font-size: 1.6rem;
+          color: $pink;
+          font-weight: bold;
+          line-height: 1.0;
+          margin-bottom: 4px;
+        }
+        .wm-user-attribute {
+          font-size: 1.2rem;
+          line-height: 1.0;
+          color: rgba(0, 0, 0, .45);
+        }
+      }
+      .wm-post-article-body {
+        @include _initBoxSizing;
+        margin-bottom: 32px;
+        padding-left: 86px;
+        padding-right: 56px;
+      }
+      .wm-post-article-footer {
+        @include _initBoxSizing;
+        padding: 16px 24px 16px 16px;
+        background-color: $color-f7f9fa;
+        border-top: 1px solid $color-ece8e9;
+        .wm-post-article-row {
+          @include _initBoxSizing;
+          display: flex;
+          justify-content: space-between;
+        }
+        .wm-attributes {
+          @include _initBoxSizing;
+          display: flex;
+          align-items: center;
+          > .wm-attribute {
+            position: relative;
+            line-height: 1.0;
+            box-sizing: border-box;
+            margin-right: 60px;
+            &::after {
+              position: absolute;
+              right: -30px;
+              top: 50%;
+              transform: translateY(-50%);
+              display: block;
+              width: 1px;
+              height: 10px;
+              content: "";
+              box-sizing: border-box;
+              background-color: rgba(0, 0, 0, .1);
+            }
+            &:last-of-type {
+              margin-right: 0;
+              &::after {
+                display: none;
+              }
+            }
+          }
+          .wm-badge {
+            @include _easing;
+            position: relative;
+            display: block;
+            width: 98px;
+            height: 28px;
+            font-size: 1.0rem;
+            line-height: 28px;
+            color: $white;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, .1);
+            border-radius: 28px;
+            &:link, &:visited {
+              text-decoration: none;
+            }
+            &:hover, &:active {
+              background-color: $pink;
+            }
+            .wm-icon-logo {
+              display: inline-block;
+              width: 50px;
+              height: 16px;
+              vertical-align: middle;
+              box-sizing: border-box;
+              margin-right: 4px;
+              margin-top: -4px;
+              background: url(../images/20051503.png) center center no-repeat;
+              background-size: contain;
+            }
+          }
+          .wm-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            line-height: 1.0;
+            color: $very-very-dark-gray;
+            &:link, &:visited {
+              text-decoration: none;
+            }
+            &:hover, &:active {
+              .wm-icon {
+                &.wm-icon-heart {
+                  background-image: url(../images/20060105.svg);
+                }
+                &.wm-icon-comment {
+                  background-image: url(../images/20060102.svg);
+                }
+              }
+            }
+            .wm-icon {
+              @include _easing;
+              display: inline-block;
+              width: 15px;
+              height: 15px;
+              vertical-align: middle;
+              box-sizing: border-box;
+              margin-right: 8px;
+              margin-top: -4px;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              &.wm-icon-heart {
+                background-image: url(../images/20060103.svg);
+              }
+              &.wm-icon-comment {
+                background-image: url(../images/20060104.svg);
+              }
+            }
+          }
+          .wm-counter {
+            font-size: 1.2rem;
+          }
+        }
+        .wm-link-large {
+          display: inline-block;
+          font-size: 1.2rem;
+          font-weight: bold;
+          line-height: 1.0;
+          color: $color-53a9cd;
+          &:link, &:visited {
+            text-decoration: none;
+          }
+          &:hover, &:active {
+            color: $color-2f7a99;
+            .wm-icon {
+              &.wm-icon-comment {
+                background-image: url(../images/20060106.svg);
+              }
+            }
+          }
+          .wm-icon {
+            @include _easing;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            vertical-align: middle;
+            box-sizing: border-box;
+            margin-right: 8px;
+            margin-top: -4px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            &.wm-icon-comment {
+              background-image: url(../images/20060102.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //レスポンシブの定義
+  @media (max-width: 767px) {
+  }
+  @media (max-width: 479px) {
+  }
+}

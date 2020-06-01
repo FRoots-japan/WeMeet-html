@@ -353,6 +353,48 @@
       background-position: center center;
     }
   }
+  //投稿するボタンの右下固定
+  .wm-button-post-fixed {
+    @include _easing;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 98;
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.0;
+    font-size: 1.2rem;
+    color: $white;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, $color-23b0e9 0%, $color-2da8e9 100%);
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.5);
+    &:link, &:visited {
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      background: linear-gradient(45deg, $color-088bb5 0%, $color-0d80b5 100%);
+    }
+    .wm-icon {
+      display: block;
+      width: 33px;
+      height: 33px;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &.wm-icon-comment {
+        margin-bottom: 8px;
+        background-image: url(../images/20060108.svg);
+      }
+    }
+  }
 
   //レスポンシブの定義
   @media (max-width: 767px) {

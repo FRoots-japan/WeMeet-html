@@ -88,6 +88,11 @@
           background: linear-gradient(135deg, $color-8773ed 0%, $color-9a3be1 100%);
         }
       }
+      &.wm-item-community {
+        &.wm-active {
+          background: linear-gradient(135deg, $color-f594a5 0%, $color-ed6d99 100%);
+        }
+      }
     }
   }
   .wm-links {

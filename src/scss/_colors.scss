@@ -22,6 +22,8 @@ $color-2d373d: #2d373d;
 $color-ee4671: #ee4671;
 $color-fc7298: #fc7298;
 $color-fd8192: #fd8192;
+$color-ed6d99: #ed6d99;
+$color-f594a5: #f594a5;
 //サブカラー（グリーン）
 $color-0dd395: #0dd395;
 $color-1cbacb: #1cbacb;
@@ -30,6 +32,12 @@ $color-00c9ec: #00c9ec;
 $color-008ae0: #008ae0;
 $color-00a0e4: #00a0e4;
 $color-29baf8: #29baf8;
+$color-53a9cd: #53a9cd;
+$color-2f7a99: #2f7a99;
+$color-23b0e9: #23b0e9;
+$color-2da8e9: #2da8e9;
+$color-088bb5: #088bb5;
+$color-0d80b5: #0d80b5;
 //サブカラー（パープル）
 $color-9a3be1: #9a3be1;
 $color-8773ed: #8773ed;
@@ -79,4 +87,12 @@ $colors: (
   color-9a3be1: $color-9a3be1,
   color-8773ed: $color-8773ed,
   color-f0edf7: $color-f0edf7,
+  color-ed6d99: $color-ed6d99,
+  color-f594a5: $color-f594a5,
+  color-53a9cd: $color-53a9cd,
+  color-2f7a99: $color-2f7a99,
+  color-23b0e9: $color-23b0e9,
+  color-2da8e9: $color-2da8e9,
+  color-088bb5: $color-088bb5,
+  color-0d80b5: $color-0d80b5,
 ) !default;
