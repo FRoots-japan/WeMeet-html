@@ -361,7 +361,31 @@
         }
       }
       .wm-search-tags-field {
+        width: auto;
+        height: auto;
+        text-align: right;
         margin-bottom: 20px;
+        .wm-search-placeholder {
+          position: relative;
+          width: auto;
+          height: auto;
+          display: inline-block;
+          line-height: 1.0;
+          padding-left: 0;
+          padding-right: 18px;
+          border-radius: 0;
+          background-color: transparent;
+          &::before {
+            left: -18px;
+          }
+          &::after {
+            right: 0;
+          }
+        }
+        .wm-search-tags {
+          text-align: left;
+          padding-top: 60px;
+        }
       }
       .wm-post-articles {
         > .wm-post-article {
