@@ -51,6 +51,20 @@ $color-twitter-hover: #1c87ca;
 $color-hatena: #527ae6;
 $color-hatena-hover: #3959ae;
 
+//フラッシュメッセージカラー
+$color-alert-danger: #e61e12;
+$color-alert-danger-bg: #ffdddd;
+$color-alert-warning: #f36090;
+$color-alert-warning-bg: #faebf0;
+$color-alert-info: #8c65ce;
+$color-alert-info-bg: #ebe7f7;
+$color-alert-success: #19c1bb;
+$color-alert-success-bg: #e9f8f5;
+$color-alert-primary: #00a0e4;
+$color-alert-primary-bg: #e4ebf6;
+$color-alert-secondary: #b5b5b5;
+$color-alert-secondary-bg: #f9f9f9;
+
 //汎用的なカラー配列
 $colors: (
   white: $white,

@@ -1,0 +1,42 @@
+.wm-alert {
+  @include _initBoxSizing;
+  font-weight: bold;
+  padding: 16px 32px;
+  border: 2px solid $very-very-dark-gray;
+  background-color: $very-very-light-gray;
+  border-radius: 6px;
+  &.wm-alert-danger {
+    color: $color-alert-danger;
+    border-color: $color-alert-danger;
+    background-color: $color-alert-danger-bg;
+  }
+  &.wm-alert-warning {
+    color: $color-alert-warning;
+    border-color: $color-alert-warning;
+    background-color: $color-alert-warning-bg;
+  }
+  &.wm-alert-info {
+    color: $color-alert-info;
+    border-color: $color-alert-info;
+    background-color: $color-alert-info-bg;
+  }
+  &.wm-alert-success {
+    color: $color-alert-success;
+    border-color: $color-alert-success;
+    background-color: $color-alert-success-bg;
+  }
+  &.wm-alert-primary {
+    color: $color-alert-primary;
+    border-color: $color-alert-primary;
+    background-color: $color-alert-primary-bg;
+  }
+  &.wm-alert-secondary {
+    color: $color-alert-secondary;
+    border-color: $color-alert-secondary;
+    background-color: $color-alert-secondary-bg;
+  }
+
+  @media (max-width: 767px) {
+    padding: 16px;
+  }
+}
